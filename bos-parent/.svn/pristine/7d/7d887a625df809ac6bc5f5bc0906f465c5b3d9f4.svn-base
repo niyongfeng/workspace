@@ -1,0 +1,1036 @@
+package cn.itcast.bos.service.identity.impl;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+
+import javax.annotation.PostConstruct;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.cache.Cache;
+import org.apache.shiro.cache.ehcache.EhCacheManager;
+import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.SimplePrincipalCollection;
+import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import com.opensymphony.xwork2.ActionContext;
+
+import cn.itcast.bos.action.VerifyAction;
+import cn.itcast.bos.dao.identity.DeptDao;
+import cn.itcast.bos.dao.identity.JobDao;
+import cn.itcast.bos.dao.identity.ResourceDao;
+import cn.itcast.bos.dao.identity.RoleDao;
+import cn.itcast.bos.dao.identity.UserDao;
+import cn.itcast.bos.entity.identity.Dept;
+import cn.itcast.bos.entity.identity.Job;
+import cn.itcast.bos.entity.identity.Resource;
+import cn.itcast.bos.entity.identity.Role;
+import cn.itcast.bos.entity.identity.User;
+import cn.itcast.bos.hibernate.GeneratorDao;
+import cn.itcast.bos.pojo.PageModel;
+import cn.itcast.bos.security.CryptographyHelper;
+import cn.itcast.bos.service.identity.IdentityService;
+import cn.itcast.bos.sms.SmsSendUtil;
+import cn.itcast.bos.util.Constant;
+
+/**
+ * 系统管理模块业务处理接口实现类
+ * @author LEE.SIU.WAH
+ * @email lixiaohua7@163.com
+ * @date 2017年1月5日 下午3:27:05
+ * @version 1.0
+ */
+@Service("identityService")
+public class IdentityServiceImpl implements IdentityService {
+	/** 定义该模块所有的数据访问接口 */
+	@Autowired
+	private UserDao userDao;
+	@Autowired
+	private RoleDao roleDao;
+	@Autowired
+	private DeptDao deptDao;
+	@Autowired
+	private JobDao jobDao;
+	@Autowired
+	private ResourceDao resourceDao;
+	@Autowired
+	private GeneratorDao generatorDao;
+	/** 注入缓存管理器 */
+	@Autowired
+	private EhCacheManager cacheManager;
+	/** 定义菜单缓存区的名称 */
+	@Value("${userResourceMenuCacheName}") // 注入属性占位符中的值
+	private String userResourceMenuCacheName;
+	/** 定义用户菜单缓存对象 */
+	private Cache<String, List<Map<String, Object>>> userMenuCache;
+	
+	/** 定义授权缓存区的名称 */
+	@Value("${authorizationCacheName}") // 注入属性占位符中的值
+	private String authorizationCacheName;
+	/** 定义用户授权缓存对象 */
+	private Cache<PrincipalCollection, AuthorizationInfo> authorizationCache;
+	
+	/** 定义Bean初始化方法  init-method 该方法在构建器、设值注入之后会执行 */
+	@PostConstruct
+	public void init(){
+		/** 获取菜单缓存区中所有的数据，返回得是一个缓存对象 */
+		this.userMenuCache = cacheManager.getCache(userResourceMenuCacheName);
+		/** 获取授权缓存区中所有的数据，返回得是一个缓存对象 */
+		this.authorizationCache = cacheManager.getCache(authorizationCacheName);
+	}
+	
+	/**
+	 * 登录方法
+	 * @param userId 账号
+	 * @param password 密码
+	 * @param vcode 验证码
+	 * @param key 是否记住用户 0不记住 1:记住
+	 * @return Map集合
+	 */
+	public Map<String, Object> login(String userId, String password, String vcode,
+			int key){
+		try{
+			// {status : 0, tip : ""}
+			Map<String, Object> map = new HashMap<>();
+			map.put("status", 1);
+			map.put("tip", "验证码不正确！");
+			/** 获取Session中的验证码  */
+			String verifyCode = (String)ActionContext
+					.getContext().getSession().get(VerifyAction.VERIFY_CODE);
+			/** 判断验证码是否正确 */
+			if (verifyCode.equalsIgnoreCase(vcode)){
+				/** 判断账号与密码是否为空 */
+				if (!StringUtils.isEmpty(userId) && !StringUtils.isEmpty(password)){
+					/** 获取Subject主体 (跟Session相关) */
+					Subject subject = SecurityUtils.getSubject();
+					/** 创建用户名密码身份认证令牌 */
+					UsernamePasswordToken token = new UsernamePasswordToken(userId, password, key == 1);
+					try{
+						/** 身份认证 */
+						subject.login(token);
+					}catch(Exception ex){
+						ex.printStackTrace();
+					}
+					/** 判断用户是否通过身份认证  */
+					if (subject.isAuthenticated()){
+						/** 根据userId查询用户 */
+						User user = getUser(userId);
+						/** 判断状态码 */
+						if (user.getStatus() == 1){
+							/** 把用户存入Session */
+							subject.getSession().setAttribute(Constant.SESSION_USER, user);
+							map.put("status", 0);
+							map.put("tip", "登录成功！");
+						}else{
+							// 0新建,1审核,2不通过审核,3冻结 
+							map.put("status", 4);
+							String[] tipArr = {"新建","审核","不通过","冻结"};
+							map.put("tip", "您处于【<font color='red'>"+tipArr[user.getStatus()]+"</font>】状态，请联系管理员！");
+						}
+					}else{
+						map.put("status", 3);
+						map.put("tip", "账号或密码不正确！");
+					}
+				}else{
+					map.put("status", 2);
+					map.put("tip", "账号与密码不能为空！");
+				}
+			}
+			return map;
+		}catch(Exception ex){
+			throw new RuntimeException("登录方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 根据主键userId获取用户
+	 * @param userId 主键
+	 * @return 用户
+	 */
+	public User getUser(String userId){
+		try{
+			return userDao.get(User.class, userId);
+		}catch(Exception ex){
+			throw new RuntimeException("根据主键userId获取用户方法出现了异常！", ex);
+		}
+	}
+	
+	/**TODO############################# 职位业务处理 ##############################*/
+	/**
+	 * 分页查询职位
+	 * @param pageModel 分页实体
+	 * @return 职位集合
+	 */
+	public List<Job> getJobByPage(PageModel pageModel){
+		try{
+			return jobDao.getJobByPage(pageModel);
+		}catch(Exception ex){
+			throw new RuntimeException("分页查询职位方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 添加职位
+	 * @param job 职位
+	 */
+	public void saveJob(Job job){
+		try{
+			jobDao.save(job);
+		}catch(Exception ex){
+			throw new RuntimeException("添加职位方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 根据主键id获取职位
+	 * @param id
+	 * @return 职位
+	 */
+	public Job getJob(Integer id){
+		try{
+			return jobDao.get(Job.class, id);
+		}catch(Exception ex){
+			throw new RuntimeException("根据主键id获取职位方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 修改职位
+	 * @param job 职位
+	 */
+	public void updateJob(Job job){
+		try{
+			jobDao.update(job);
+		}catch(Exception ex){
+			throw new RuntimeException("修改职位方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 批量删除职位
+	 * @param ids
+	 */
+	public void deleteJob(String[] ids){
+		try{
+			/** 第一种方式： */
+			/*for (int i = 0; i < ids.length; i++){
+				jobDao.delete(getJob(Integer.valueOf(ids[i])));
+			}*/
+			/** 第二种方式： */
+			/*for (int i = 0; i < ids.length; i++){
+				Job job = new Job();
+				job.setId(Integer.valueOf(ids[i]));
+				jobDao.delete(job);
+			}*/
+			/** 第三种方式： */
+			jobDao.deletJob(ids);
+		}catch(Exception ex){
+			throw new RuntimeException("批量删除职位方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 加载职位
+	 * @return List
+	 */
+	public List<Map<String, Object>> loadJob(){
+		try{
+			return jobDao.getJobByIdAndName();
+		}catch(Exception ex){
+			throw new RuntimeException("加载职位方法出现了异常！", ex);
+		}
+	}
+	
+	
+	/**TODO############################# 部门业务处理 ##############################*/
+	/**
+	 * 分页查询部门
+	 * @param pageModel 分页实体
+	 * @return 部门集合
+	 */
+	public List<Dept> getDeptByPage(PageModel pageModel){
+		try{
+			return deptDao.getDeptByPage(pageModel);
+		}catch(Exception ex){
+			throw new RuntimeException("分页查询部门方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 添加部门
+	 * @param dept 部门
+	 */
+	public void saveDept(Dept dept){
+		try{
+			deptDao.save(dept);
+		}catch(Exception ex){
+			throw new RuntimeException("添加部门方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 根据主键id查询部门
+	 * @param id 主键
+	 * @return 部门
+	 */
+	public Dept getDept(Integer id){
+		try{
+			return deptDao.get(Dept.class, id);
+		}catch(Exception ex){
+			throw new RuntimeException("根据主键id查询部门方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 修改部门
+	 * @param dept 部门
+	 */
+	public void updateDept(Dept dept){
+		try{
+			deptDao.update(dept);
+		}catch(Exception ex){
+			throw new RuntimeException("修改部门方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 批量删除部门
+	 * @param ids
+	 */
+	public void deleteDept(String[] ids){
+		try{
+			deptDao.deleteDept(ids);
+		}catch(Exception ex){
+			throw new RuntimeException("批量删除部门方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 加载部门
+	 * @return List
+	 */
+	public List<Map<String, Object>> loadDept(){
+		try{
+			return deptDao.getDeptByIdAndName();
+		}catch(Exception ex){
+			throw new RuntimeException("加载部门方法出现了异常！", ex);
+		}
+	}
+	
+	/**TODO############################# 角色业务处理 ##############################*/
+	/**
+	 * 分页查询角色
+	 * @param pageModel 分页实体
+	 * @return List
+	 */
+	public List<Map<String, Object>> getRoleByPage(PageModel pageModel){
+		try{
+			return roleDao.getRoleByPage(pageModel);
+		}catch(Exception ex){
+			throw new RuntimeException("分页查询角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 添加角色
+	 * @param role
+	 */
+	public void saveRole(Role role){
+		try{
+			roleDao.save(role);
+		}catch(Exception ex){
+			throw new RuntimeException("添加角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 根据主键id获取角色
+	 * @param id 角色id
+	 * @return 角色
+	 */
+	public Role getRole(Integer id){
+		try{
+			return roleDao.get(Role.class, id);
+		}catch(Exception ex){
+			throw new RuntimeException("根据主键id获取角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 修改角色
+	 * @param role
+	 */
+	public void updateRole(Role role){
+		try{
+			/** 获取一个持久化对象 */
+			Role r = getRole(role.getId());
+			r.setCode(role.getCode());
+			r.setName(role.getName());
+			r.setRemark(role.getRemark());
+		}catch(Exception ex){
+			throw new RuntimeException("修改角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 批量删除角色
+	 * @param ids
+	 */
+	public void deleteRole(String[] ids){
+		try{
+			roleDao.deleteRole(ids);
+		}catch(Exception ex){
+			throw new RuntimeException("批量删除角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 多条件分页查询用户
+	 * @param pageModel 分页实体
+	 * @param user 用户实体
+	 * @return 集合
+	 */
+	public List<Map<String, Object>> getUserByPage(PageModel pageModel, User user){
+		try{
+			return userDao.getUserByPage(pageModel, user);
+		}catch(Exception ex){
+			throw new RuntimeException("多条件分页查询用户方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 查询部门与职位
+	 * @return Map集合
+	 */
+	public Map<String, List<Map<String, Object>>> getDeptJob(){
+		try{
+			// data: {"depts" : [{id:1,name:''},{}], "jobs" : [{id:1,name:''},{}]}
+			Map<String, List<Map<String,Object>>> data = new HashMap<>();
+			data.put("depts", loadDept());
+			data.put("jobs", loadJob());
+			return data;
+		}catch(Exception ex){
+			throw new RuntimeException("查询部门与职位方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 验证登录名
+	 * @param userId 用户id
+	 * @return 状态码 0: 重复   1:不重复
+	 */
+	public int validUserId(String userId){
+		try{
+			return getUser(userId) != null ? 0 : 1;
+		}catch(Exception ex){
+			throw new RuntimeException("验证登录名方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 添加用户
+	 * @param user 用户实体
+	 */
+	public void saveUser(User user){
+		try{
+			/** shiro加密 */
+			/** 生成随机salt (要求每一个用户的盐都不一样) */
+			String salt = CryptographyHelper.getRandomSalt();
+			/** 设置盐 */
+			user.setSalt(salt);
+			/** 设置用户密码 */
+			user.setPassword(CryptographyHelper.encrypt(user.getPassword(), salt));
+			userDao.save(user);
+		}catch(Exception ex){
+			throw new RuntimeException("添加用户方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 获取修改的用户
+	 * @param userId 用户id
+	 * @return 用户
+	 */
+	public User getUpdateUser(String userId){
+		try{
+			User user = getUser(userId);
+			/** 加载延迟的属性 */
+			if (user != null){
+				if (user.getDept() != null) user.getDept().getId();
+				if (user.getJob() != null) user.getJob().getId();
+			}
+			return user;
+		}catch(Exception ex){
+			throw new RuntimeException("获取修改的用户方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 修改用户
+	 * @param user 用户
+	 */
+	public void updateUser(User user){
+		try{
+			/** 获取一个持久化状态的对象 */
+			User u = getUser(user.getUserId());
+			u.setBirthday(user.getBirthday());
+			u.setDept(user.getDept());
+			u.setEmail(user.getEmail());
+			u.setJob(user.getJob());
+			u.setName(user.getName());
+			u.setPhone(user.getPhone());
+			u.setSalary(user.getSalary());
+			u.setSex(user.getSex());
+		}catch(Exception ex){
+			throw new RuntimeException("修改用户方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 批量删除用户
+	 * @param userIds
+	 */
+	public void deleteUser(String[] userIds){
+		try{
+			userDao.deleteUser(userIds);
+		}catch(Exception ex){
+			throw new RuntimeException("批量删除用户方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 批量审核用户
+	 * @param userIds
+	 * @param status
+	 */
+	public void checkUser(String[] userIds, Short status){
+		try{
+			userDao.checkUser(userIds, status);
+		}catch(Exception ex){
+			throw new RuntimeException("批量审核用户方法出现了异常！", ex);
+		}
+	}
+	
+	
+	/**TODO############################# 资源业务处理 ##############################*/
+	/**
+	 * 获取资源树的数据 
+	 * @return List
+	 */
+	public List<Map<String, Object>> getResourceTree(){
+		try{
+			// [{id:0, pid:'', name:"资源树"},{},...]
+			List<Map<String, Object>> data = resourceDao.getResourceByCodeAndName();
+			/** 迭代List集合 */
+			for (Map<String, Object> map : data){
+				/** 获取code */
+				String code = map.get("id").toString();
+				/** 通过code的位数计算出pid */
+				String pid = code.length() == CODE_LEN ? "0" : code.substring(0, code.length() - CODE_LEN);
+				map.put("pid", pid);
+			}
+			return data;
+		}catch(Exception ex){
+			throw new RuntimeException("获取资源树的数据方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 分页查询资源
+	 * @param parentCode 父级code
+	 * @param pageModel 分页实体
+	 * @return List
+	 */
+	public List<Map<String, Object>> getResourceByPage(String parentCode,
+			PageModel pageModel){
+		try{
+			return resourceDao.getResourceByPage(parentCode, pageModel, CODE_LEN);
+		}catch(Exception ex){
+			throw new RuntimeException("分页查询资源方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 添加资源
+	 * @param resource 资源
+	 */
+	public void saveResource(Resource resource){
+		try{
+			/** 获取父级code */
+			String parentCode = resource.getCode();
+			/** 生成主键code的值 */
+			String code = generatorDao.generatorCode(Resource.class, "code", parentCode, CODE_LEN);
+			System.out.println("code: " + code);
+			resource.setCode(code);
+			resourceDao.save(resource);
+		}catch(Exception ex){
+			throw new RuntimeException("分页查询资源方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 根据主键code查询资源对象
+	 * @param code 主键
+	 * @return 资源
+	 */
+	public Resource getResource(String code){
+		try{
+			return resourceDao.get(Resource.class, code);
+		}catch(Exception ex){
+			throw new RuntimeException("根据主键code查询资源对象方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 修改资源
+	 * @param resource 资源
+	 */
+	public void updateResource(Resource resource){
+		try{
+			/** 获取持久化状态对象 */
+			Resource r = getResource(resource.getCode());
+			r.setName(resource.getName());
+			r.setPermission(resource.getPermission());
+			r.setType(resource.getType());
+			r.setUrl(resource.getUrl());
+		}catch(Exception ex){
+			throw new RuntimeException("修改资源方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 批量删除资源
+	 * @param codes
+	 */
+	public void deleteResource(String[] codes){
+		try{
+			resourceDao.deleteResource(codes);
+		}catch(Exception ex){
+			throw new RuntimeException("批量删除资源方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 获取所有的角色
+	 * @return List
+	 */
+	public List<Map<String, Object>> getAllRole(String userId){
+		try{
+			/** 获取用户 */
+			User user = getUser(userId);
+			/** 查询该用户已经绑定的角色 */
+			Set<Role> roles = user.getRoles();
+			/** 定义Set集合封装角色id */
+			Set<Integer> ids = new HashSet<>();
+			for (Role role : roles){
+				ids.add(role.getId());
+			}
+			
+			/** 查询所有的角色 */
+			List<Map<String, Object>> data = roleDao.getAllRole();
+			/** 循环所有的角色 */
+			for (Map<String, Object> role : data){
+				/** 获取角色的主键id值 */
+				Integer id = (Integer)role.get("id");
+				role.put("checked", ids.contains(id));
+			}
+			
+			return data;
+		}catch(Exception ex){
+			throw new RuntimeException("获取所有的角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 用户绑定角色
+	 * @param userId 用户主键id
+	 * @param ids 多个角色
+	 */
+	public void bindRole(String userId, String[] ids){
+		try{
+			/** 
+			 * 往用户角色中间表添加数据(bos_id_user_role) 
+			 * 看用户 角色这两个持久化类，哪边维护中间表 (@ManyToMany没有加mappedBy属性的一边)
+			 * 用户维护中间表（CRUD）
+			 */
+			/** 获取持久化状态的用户 */
+			User user = getUser(userId);
+			/** 获取该用户已经绑定的角色 */
+			Set<Role> roles = user.getRoles();
+			/** 清空已绑定的角色 */
+			roles.clear();
+			
+			if (ids != null && ids.length > 0){
+				/** 循环添加新的角色 */
+				for (String id : ids){
+					Role role = new Role();
+					role.setId(Integer.valueOf(id));
+					roles.add(role);
+				}
+			}
+			user.setRoles(roles);
+			
+			/** 删除用户对应的菜单缓存数据 */
+			userMenuCache.remove(userId);
+			
+			/** 获取安全数据源的名称 */
+			String realmName = SecurityUtils.getSubject().getPrincipals()
+						.getRealmNames().iterator().next();
+			/** 创建当前人集合对象 */
+			PrincipalCollection pc = new SimplePrincipalCollection(userId, realmName);
+			/** 删除用户对应的授权缓存数据 */
+			authorizationCache.remove(pc);
+			
+		}catch(Exception ex){
+			throw new RuntimeException("用户绑定角色方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 查询所有的资源
+	 * @return List
+	 */
+	public List<Map<String, Object>> getAllResource(int roleId){
+		try{
+			/** 获取角色 */
+			Role role = getRole(roleId);
+			/** 获取该角色已经绑定的资源 */
+			Set<Resource> resources = role.getResources();
+			/** 定义Set集合封装code值 */
+			Set<String> codes = new HashSet<>();
+			for (Resource r : resources){
+				codes.add(r.getCode());
+			}
+			/**
+			 * {"id" : 2, "name" : "苹果", "remark" : "苹果手机",
+			 *  "_parentId" : 1, "state" : "closed", "checked" : true},
+			 */
+			List<Map<String, Object>> data = resourceDao.getAllResource();
+			for (Map<String,Object> map : data){
+				/** 获取code */
+				String code = map.get("code").toString();
+				if (code.length() > CODE_LEN){
+					/** 指定父节点 */
+					map.put("_parentId", code.substring(0, code.length() - CODE_LEN));
+					/** 指定父节点是展开还是关闭(8位code父节点关闭) */
+					if (code.length() == CODE_LEN * 2){
+						map.put("state", "closed");
+					}
+					/** 是否让树节点前面的checkbox选中 */
+					map.put("checked", codes.contains(code));
+				}
+			}
+			return data;
+		}catch(Exception ex){
+			throw new RuntimeException("查询所有的资源方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 角色绑定资源
+	 * @param id
+	 * @param codes
+	 */
+	public void bindResource(Integer id, String[] codes){
+		try{
+			/**
+			 * 角色资源中间表 bos_id_role_resource
+			 * 角色持久化维护中间表
+			 */
+			Role role = getRole(id);
+			/** 获取该角色已绑定的资源 */
+			Set<Resource> resources = role.getResources();
+			/** 清空原来绑定的资源 */
+			resources.clear();
+			
+			if (codes != null && codes.length > 0){
+				/** 循环添加新的资源 */
+				for (String code : codes){
+					Resource resource = new Resource();
+					resource.setCode(code);
+					resources.add(resource);
+				}
+			}
+			
+			role.setResources(resources);
+			
+			/** 获取该角色对应的所有的用户 */
+			Set<User> users = role.getUsers();
+			/** 获取安全数据源的名称 */
+			String realmName = SecurityUtils.getSubject().getPrincipals()
+						.getRealmNames().iterator().next();
+			/** 循环删除用户菜单与授权缓存 */
+			for (User user : users){
+				/** 删除用户对应的菜单缓存数据 */
+				userMenuCache.remove(user.getUserId());
+				/** 创建当前人集合对象 */
+				PrincipalCollection pc = new SimplePrincipalCollection(user.getUserId(), realmName);
+				/** 删除用户对应的授权缓存数据 */
+				authorizationCache.remove(pc);
+			}
+			
+		}catch(Exception ex){
+			throw new RuntimeException("角色绑定资源方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 获取当前登录用户的菜单
+	 * @return List
+	 */
+	public List<Map<String, Object>> getUserMenu(){
+		try{
+			
+			/** 获取Session中用户 */
+			User user = (User)ActionContext.getContext()
+					.getSession().get(Constant.SESSION_USER);
+			
+			/** ############ 到缓存中取用户菜单数据 ############# */
+			List<Map<String, Object>> menuData = userMenuCache.get(user.getUserId());
+			/** 判断用户菜单数据 */
+			if (menuData != null && menuData.size() > 0){
+				System.out.println("缓存中menuData : " + menuData);
+				return menuData;
+			}
+			
+			/** ############################# 查询用户菜单数据业务部分 ############################## **/
+			/** 根据登录用户userId，查询他所有角色，再根据角色查询他所有的资源  */
+			List<String> resourceCodes = resourceDao.getResourceByUserId(user.getUserId());
+			System.out.println("resourceCodes: " + resourceCodes);
+			// 00010001, 00010002, 00010003, 00010004, 00010005,
+			// 000200010001, 000200010002, 000200010003, 000200010004,
+			// 000200010005, 00020002, 00020003, 00020004, 00030001, 00030002, 00030003
+			/** 定义Set集合封装8位的code */
+			Set<String> codes = new HashSet<>();
+			/** 迭代所有的code,截取8位的code作为菜单  set集合元素不重复 */
+			for (String resourceCode : resourceCodes){
+				/** 获取一个资源对象 */
+				Resource resource = getResource(resourceCode);
+				/** 判断resource是菜单还是按钮 */
+				if ("menu".equals(resource.getType())){
+					codes.add(resourceCode);
+				}else{
+					codes.add(resourceCode.substring(0, resourceCode.length() - CODE_LEN));
+				}
+			}
+			System.out.println("codes: " + codes);
+			// [00010004, 00020001, 00010003, 00010005, 00030002, 
+			//  00020004, 00030001, 00010002, 00020003, 00010001, 00020002, 00030003]
+			/** 把Set集合 转化成List集合 */
+			List<String> tempLists = new ArrayList<String>(codes);
+			/** 对List集合中的元素进行排序 */
+			Collections.sort(tempLists);
+			
+			System.out.println("tempLists: " + tempLists);
+			// 00010001, 00010002, 00010003, 00010004, 00010005,
+			// 00020001, 00020002, 00020003, 00020004,
+			// 00030001, 00030002, 00030003
+			
+			/** 再把List集合转化成Map集合 */
+			// map<key,value>: 
+			// key --> 0001
+			// value --> 00010001, 00010002, 00010003, 00010004, 00010005
+			Map<String, List<String>> tempMaps = new LinkedHashMap<>();
+			String key = null;
+			List<String> value = new ArrayList<>();
+			/** 迭代List集合 */
+			for (String code : tempLists){
+				// code : 8位 00020001
+				if (key != null && !code.startsWith(key)){
+					tempMaps.put(key, value);
+					value = new ArrayList<>();
+				}
+				/** 截取前面的四位 */
+				key = code.substring(0, code.length() - CODE_LEN); // 0002
+				value.add(code); // 00020001
+			}
+			/** 添加最后一组 */
+			if (key != null && value.size() > 0){
+				tempMaps.put(key, value);
+			}
+			/**
+			 * [{"title" : "系统管理", "subMenu" : [
+					{"id": 1, "pId" : 0, "name" : "用户管理", "href" : "/identity/showSelectUser.jspx"},
+					{"id": 2, "pId" : 0, "name" : "角色管理", "href" : "/identity/showSelectRole.jspx"}]},
+ 				{"title" : "基础数据", "subMenu" : [
+					{"id": 1, "pId" : 0, "name" : "取派员管理", "href" : "/identity/showSelectUser.jspx"},
+					{"id": 2, "pId" : 0, "name" : "区域管理", "href" : "/identity/showSelectRole.jspx"}]}]
+			 */
+			/** 定义最后返回的数据 */
+			menuData = new ArrayList<>();
+			/** 迭代Map集合 */
+			for (Map.Entry<String, List<String>> entry : tempMaps.entrySet()){
+				System.out.println("key: " + entry.getKey() + " value: " + entry.getValue());
+				/** 
+				 * 定义Map集合 
+				 * {"title" : "系统管理", "subMenu" : [
+					{"id": 1, "pId" : 0, "name" : "用户管理", "href" : "/identity/showSelectUser.jspx"},
+					{"id": 2, "pId" : 0, "name" : "角色管理", "href" : "/identity/showSelectRole.jspx"}]}
+				 * */
+				Map<String, Object> mapData = new HashMap<>();
+				/** 获取key 4位code 生成标题 */
+				mapData.put("title", getResource(entry.getKey()).getName());
+				
+				/** 树的数据[{},{}] */
+				List<Map<String, Object>> treeData = new ArrayList<>();
+				/** 获取Map集合中的value  (存放得是8位的code) */
+				for (String code8 : entry.getValue()){
+					/**
+					 * {"id": 1, "pId" : 0, "name" : "用户管理", 
+					 * "href" : "/identity/showSelectUser.jspx"}
+					 */
+					Map<String, Object> treeObj = new HashMap<>();
+					Resource r = getResource(code8);
+					treeObj.put("id", code8); // 00010001
+					treeObj.put("pId", "0");
+					treeObj.put("name", r.getName());
+					treeObj.put("href", r.getUrl());
+					treeData.add(treeObj);
+				}
+				mapData.put("subMenu", treeData);
+				
+				/** 添加到List集合 */
+				menuData.add(mapData);
+			}
+			System.out.println("业务中menuData : " + menuData);
+			/** ############################# 查询用户菜单数据业务部分 ############################## **/
+			
+			/** #############把用户菜单数据存入EhCache缓存中############ */
+			userMenuCache.put(user.getUserId(), menuData);
+			return menuData;
+		}catch(Exception ex){
+			throw new RuntimeException("获取当前登录用户的菜单方法出现了异常！", ex);
+		}
+	}
+	
+	/**
+	 * 根据userId查询该用户所有的角色字符串
+	 * @param userId
+	 * @return Set集合
+	 */
+	public Set<String> getRoleByUserId(String userId){
+		try{
+			/** 根据主键id查询用户 */
+			User user = getUser(userId);
+			/** 获取该用户所有的角色 */
+			Set<Role> roles = user.getRoles();
+			/** 定义Set集合封装角色字符串 */
+			Set<String> roleSets = new HashSet<String>();
+			for (Role role : roles){
+				roleSets.add(role.getCode());
+			}
+			return roleSets;
+		}catch(Exception ex){
+			throw new RuntimeException("根据userId查询该用户所有的角色字符串方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 根据userId查询该用户所有的权限字符串
+	 * @param userId
+	 * @return Set集合
+	 */
+	public Set<String> getPermissionsByUserId(String userId){
+		try{
+			/** 根据用户id查询他所有的角色，再根据角色查询他所有的权限资源 */
+			List<String> resourceCodes = resourceDao.getResourceByUserId(userId);
+			/** 定义Set集合封装权限字符串  (Set集合元素不重复)*/
+			Set<String> permissionSets = new HashSet<>();
+			for (String resourceCode : resourceCodes){
+				permissionSets.add(getResource(resourceCode).getPermission());
+			}
+			return permissionSets;
+		}catch(Exception ex){
+			throw new RuntimeException("根据userId查询该用户所有的权限字符串方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 修改密码
+	 * @param oldPwd 旧密码
+	 * @param newPwd 新密码
+	 * @param okPwd 确认密码
+	 * @return 成功还是失败
+	 */
+	public boolean updatePwd(String oldPwd, String newPwd, String okPwd){
+		try{
+			if (!StringUtils.isEmpty(newPwd) && newPwd.equals(okPwd)){
+				/** 获取当前登录用户 */
+				User user = (User)ActionContext.getContext()
+						.getSession().get(Constant.SESSION_USER);
+				/** 获取一个持久化状态的用户 */
+				User u = getUser(user.getUserId());
+				/** 判断旧密码是否一致 */
+				if (u.getPassword().equals(CryptographyHelper.encrypt(oldPwd, u.getSalt()))){
+					/** 生成一个新的加密盐 */
+					String salt = CryptographyHelper.getRandomSalt();
+					/** 修改用户密码 */
+					u.setSalt(salt);
+					u.setPassword(CryptographyHelper.encrypt(newPwd, salt));
+					return true;
+				}
+			}
+			return false;
+		}catch(Exception ex){
+			throw new RuntimeException("修改密码方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 发送短信验证码
+	 * @param phone 手机号码
+	 * @return 成功还是失败
+	 */
+	public boolean sendSmsVerifyCode(String phone){
+		try{
+			/** 随机生六位数字的验证码 */
+			String verifyCode = UUID.randomUUID().toString()
+					.replaceAll("-", "")
+					.replaceAll("[a-zA-Z]", "").substring(0, 6);
+			System.out.println("verifyCode: " + verifyCode);
+			/** 发送短信 */
+			boolean flag = SmsSendUtil.sendSms(phone, verifyCode);
+			/** 发送成功，把短信验证码存入Session */
+			if (flag){
+				ActionContext.getContext().getSession()
+					.put(Constant.SMS_VERIFY_CODE, verifyCode);
+			}
+			return flag;
+		}catch(Exception ex){
+			throw new RuntimeException("发送短信验证码方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 验证短信验证码 
+	 * @param userId 用户账号
+	 * @param phone 手机号码
+	 * @param verifyCode 验证码
+	 * @return 成功还是失败
+	 */
+	public boolean verifyFindPwdSms(String userId, String phone, String verifyCode){
+		try{
+			/** 获取Session中的短信验证码 */
+			String smsCode = (String)ActionContext.getContext()
+						.getSession().get(Constant.SMS_VERIFY_CODE);
+			/** 判断用户输入的短信验证码是否正确 */
+			if (smsCode.equals(verifyCode)){
+				/** 判断账号与手机号码 */
+				User user = getUser(userId);
+				if (user != null && user.getPhone().equals(phone)){
+					/** 把当前用户的userId存入Session */
+					ActionContext.getContext().getSession().put(Constant.FIND_PWD_USER, userId);
+					return true;
+				}
+			}
+			return false;
+		}catch(Exception ex){
+			throw new RuntimeException("验证短信验证码方法出现了异常！", ex);
+		}
+	}
+	/**
+	 * 短信验证码修改用户密码(找回密码)
+	 * @param newPwd 新密码
+	 * @param okPwd 确认密码
+	 * @return 成功还是失败
+	 */
+	public boolean updatePwd(String newPwd, String okPwd){
+		try{
+			/** 判断密码是否一致 */
+			if (!StringUtils.isEmpty(newPwd) && newPwd.equals(okPwd)){
+				/** 获取用户 */
+				String userId = (String)ActionContext.getContext()
+						.getSession().get(Constant.FIND_PWD_USER);
+				if (!StringUtils.isEmpty(userId)){
+					User user = getUser(userId);
+					if (user != null){
+						/** 生成一个新的加密盐 */
+						String salt = CryptographyHelper.getRandomSalt();
+						/** 修改用户密码 */
+						user.setSalt(salt);
+						user.setPassword(CryptographyHelper.encrypt(newPwd, salt));
+						return true;
+					}
+				}
+			}
+			return false;
+		}catch(Exception ex){
+			throw new RuntimeException("短信验证码修改用户密码(找回密码)方法出现了异常！", ex);
+		}
+	}
+}

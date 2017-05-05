@@ -1,0 +1,79 @@
+<ehcache>
+
+    <!-- Sets the path to the directory where cache .data files are created.
+
+         If the path is a Java System Property it is replaced by
+         its value in the running VM.
+
+         The following properties are translated:
+         user.home - User's home directory
+         user.dir - User's current working directory
+         java.io.tmpdir - Default temp file path 
+       diskStore: 配置缓存磁盘存储目录  
+     -->
+    <diskStore path="F:/cache"/>
+
+
+    <!--Predefined caches.  Add your cache configuration settings here.
+        If you do not have a configuration for your cache a WARNING will be issued when the
+        CacheManager starts
+
+        The following attributes are required for defaultCache:
+
+        name              - Sets the name of the cache. This is used to identify the cache. It must be unique.
+        maxInMemory       - Sets the maximum number of objects that will be created in memory
+        eternal           - Sets whether elements are eternal. If eternal,  timeouts are ignored and the element
+                            is never expired.
+        timeToIdleSeconds - Sets the time to idle for an element before it expires. Is only used
+                            if the element is not eternal. Idle time is now - last accessed time
+        timeToLiveSeconds - Sets the time to live for an element before it expires. Is only used
+                            if the element is not eternal. TTL is now - creation time
+        overflowToDisk    - Sets whether elements can overflow to disk when the in-memory cache
+                            has reached the maxInMemory limit.
+
+        -->
+
+    <!-- 
+    	配置授权的缓存区
+    	name : 缓存区的名称
+    	maxElementsInMemory: 缓存中的对象在内存中存放的最大数量
+    	eternal: 缓存中的对象是否永久有效 false: 不是  true:是
+    	timeToIdleSeconds : 缓存中的对象空闲的有效时间(按秒计算) 60秒
+    	timeToLiveSeconds : 缓存中的对象存活的有效时间(按秒计算)
+    	overflowToDisk : 缓存中的对象超出内存中存放的最大数量就写入磁盘
+    	maxElementsOnDisk: 缓存中的对象在磁盘中存储的最大数量
+    	memoryStoreEvictionPolicy: 内存中存储的缓存对象逐出策略(算法) 
+    	   LRU: LRU是Least Recently Used 近期最少使用算法
+    	   FIFO: FIFO是First In First Out 先入先出算法
+        -->
+    <cache name="shiro-authorizationCache"
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="600"
+        timeToLiveSeconds="600"
+        overflowToDisk="true"
+        maxElementsOnDisk="10000000"
+        memoryStoreEvictionPolicy="LRU"/>
+	
+	<!-- 配置用户资源菜单缓存区 -->
+	<cache name="shiro-userResourceMenuCache"
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="600"
+        timeToLiveSeconds="600"
+        overflowToDisk="true"
+        maxElementsOnDisk="10000000"
+        memoryStoreEvictionPolicy="LRU"/>
+    
+    <!-- 配置会话Session缓存区 -->
+	<cache name="shiro-activeSessionsCache"
+        maxElementsInMemory="1000"
+        eternal="true"
+        timeToIdleSeconds="0"
+        timeToLiveSeconds="0"
+        overflowToDisk="true"
+        maxElementsOnDisk="10000000"
+        memoryStoreEvictionPolicy="LRU"/>
+    
+
+</ehcache>

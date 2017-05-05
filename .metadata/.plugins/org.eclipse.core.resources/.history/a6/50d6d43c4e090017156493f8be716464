@@ -1,0 +1,45 @@
+package com.qingke.test;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Console {
+	public static void main(String[] args) throws IOException {
+		Test f = new Test();
+		//f.help();
+		//f.ls("","02");
+		//f.ls("-all");
+		//f.find("-name", "江");
+		//f.find("-salary", 5000);
+		//f.sort("-name");
+		//f.sort("-salary");
+		Scanner sc = new Scanner(System.in);
+		one : while(true) {
+			int count = 0;
+			String str = sc.nextLine();
+			switch(str) {
+			case "help" : f.help();count++;break;
+			case "exit" : break one;
+			case "ls -all" :f.ls("-all");count++;break;
+			case "sort -name" : f.sort("-name");count++;break;
+			case "sort -salary" : f.sort("-salary");count++;break;
+			default:break;
+			}
+			if(str.length() >=3 && str.substring(0, 3).equals("ls ")) {
+				if(str.length() >= 7 && str.substring(3, 7).equals("-all")) {
+					if(str.length() >= 8) {
+						f.ls("-all", str.substring(8));
+						count++;
+					}
+				}else if(str.length() >= 4) {
+					f.ls("",str.substring(4));
+					count++;
+				}
+			}
+			if(count == 0) {
+				System.out.println("指令有误！可通过help查看帮助");
+			}
+			
+		}
+	}
+}

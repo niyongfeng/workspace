@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+    <package name="basic" namespace="/basic" extends="bos">
+    	
+    	<!-- ####################### 区域管理 ######################## -->
+    	<!-- 跳转到区域分页查询的页面 -->
+		<action name="showSelectRegion" class="cn.itcast.bos.action.basic.RegionAction" method="showSelectRegion">
+			<result>/WEB-INF/jsp/basic/region.jsp</result>
+		</action>
+		<!-- 分页查询区域 -->
+		<action name="selectRegion" class="cn.itcast.bos.action.basic.RegionAction"
+				method="selectRegion"/>
+		
+		<!-- Excel导入 -->
+		<action name="importRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="importRegion"/>
+		
+		<!-- 跳转到添加区域的页面 -->
+		<action name="showAddRegion" class="cn.itcast.bos.action.basic.RegionAction" method="showAddRegion">
+			<result>/WEB-INF/jsp/basic/addRegion.jsp</result>
+		</action>
+		<!-- 添加区域 -->
+		<action name="addRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="addRegion"/>
+			
+		<!-- 跳转到修改区域的页面 -->
+		<action name="showUpdateRegion" class="cn.itcast.bos.action.basic.RegionAction" method="showUpdateRegion">
+			<result>/WEB-INF/jsp/basic/updateRegion.jsp</result>
+		</action>
+		
+		<!-- 修改区域 -->
+		<action name="updateRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="updateRegion"/>
+		
+		<!-- 批量删除区域 -->
+		<action name="deleteRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="deleteRegion"/>
+			
+		
+		<!-- ####################### 分区管理 ######################## -->
+		<!-- 跳转到分页查询分区页面 -->
+		<action name="showSelectSubArea" class="cn.itcast.bos.action.basic.SubAreaAction"
+			    method="showSelectSubArea">
+			<result>/WEB-INF/jsp/basic/subArea.jsp</result>
+		</action>
+		<!-- 多条件分页查询分区 -->
+		<action name="selectSubArea" class="cn.itcast.bos.action.basic.SubAreaAction" 
+				method="selectSubArea"/>
+		
+		<!-- 导出分区数据到Excel -->
+		<action name="exportSubArea" class="cn.itcast.bos.action.basic.SubAreaAction" 
+				method="exportSubArea"/>
+				
+		<!-- 跳转到添加分区页面 -->
+		<action name="showAddSubArea" class="cn.itcast.bos.action.basic.SubAreaAction" 
+				method="showAddSubArea">
+			<result>/WEB-INF/jsp/basic/addSubArea.jsp</result>
+		</action>
+		<!-- 异步加载定区数据 -->
+		<action name="loadFixedArea" class="cn.itcast.bos.action.basic.SubAreaAction" 
+				method="loadFixedArea"/>
+				
+		<!-- 异步加载区域 -->
+		<action name="loadRegion" class="cn.itcast.bos.action.basic.SubAreaAction" 
+				method="loadRegion"/>
+		<!-- 添加定区 -->
+		<action name="addSubArea" class="cn.itcast.bos.action.basic.SubAreaAction" 
+				method="addSubArea"/>
+				
+				
+				
+		<!-- ####################### 定区管理 ######################## -->
+		<!-- 跳转到分页查询定区的页面 -->
+		<action name="showSelectFixedArea" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="showSelectFixedArea">
+			<result>/WEB-INF/jsp/basic/fixedArea.jsp</result>
+		</action>
+		<!-- 分页查询定区 -->
+		<action name="selectFixedArea" class="cn.itcast.bos.action.basic.FixedAreaAction"
+			    method="selectFixedArea"/>
+			    
+		<!-- 根据定区id查询关联的分区 -->
+		<action name="relationSubArea" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="relationSubArea"/>
+		<!-- 根据定义id查询关联的客户 -->
+		<action name="selectRelationCustomer" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="selectRelationCustomer"/>
+		<!-- 解除关联的客户 -->
+		<action name="deleteRelationCustomer" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="deleteRelationCustomer"/>
+				
+		<!-- 跳转到定区关联客户的页面 -->
+		<action name="showRelationCustomer" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="showRelationCustomer">
+			<result>/WEB-INF/jsp/basic/relationCustomer.jsp</result>
+		</action>
+		
+		<!-- 分页查询定区没有关联的客户 -->
+		<action name="selectUnRelationCustomer" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="selectUnRelationCustomer"/>
+				
+		<!-- 定区关联客户 -->
+		<action name="relationCustomer" class="cn.itcast.bos.action.basic.FixedAreaAction" 
+				method="relationCustomer"/>
+    </package>
+    
+    
+    
+</struts>

@@ -1,0 +1,24 @@
+package com.qingke.tianqi;
+
+import java.util.Scanner;
+
+import com.qing.pojo.LocationNow;
+import com.qing.pojo.Results;
+
+public class TestWeather {
+	public static void main(String[] args) {
+		
+		weather w = new weather();
+
+		Scanner sc = new Scanner(System.in);
+
+		print(w.getResult("beijing"));
+		
+	}
+	
+	public static void print(Results results) {
+		LocationNow locationNow = results.getResult().get(0);
+		System.out.println(locationNow);
+	}
+}
+

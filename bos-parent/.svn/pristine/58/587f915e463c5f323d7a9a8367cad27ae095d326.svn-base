@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 配置Struts2常量 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.extension" value="jspx,action,do"/>
+
+    <package name="bos" namespace="/" extends="json-default">
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<!-- 配置登录拦截器 -->
+			<interceptor name="loginInterceptor" class="cn.itcast.bos.interceptor.LoginInterceptor"/>
+			<!-- 配置登录拦截器栈 -->
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="loginInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 配置默认拦截器引用 -->
+		<default-interceptor-ref name="loginStack"/>
+		
+		<!-- 全局结果配置 -->
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <!-- 登录拦截器返回了login -->
+            <result name="login">/login.jsp</result>
+            <!-- 授权未通过的页面 -->
+            <result name="unauthorized">/unauthorized.jsp</result>
+        </global-results>
+        
+        
+		<!-- 全局异常配置 -->
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+            <exception-mapping exception="org.apache.shiro.authz.UnauthorizedException" result="unauthorized" />
+        </global-exception-mappings>
+        
+        
+        <!-- 跳转到主页面 -->
+        <action name="main">
+        	<result>/WEB-INF/jsp/main.jsp</result>
+        </action>
+        
+        <!-- 配置验证码 -->
+        <action name="verify" class="cn.itcast.bos.action.VerifyAction">
+        	<!-- 只要Action配置了自己的拦截器，全局的拦截器就失效 -->
+        	<interceptor-ref name="defaultStack"/>
+        </action>
+        
+        <!-- 异步请求登录 -->
+        <action name="login" class="cn.itcast.bos.action.LoginAction">
+        	<!-- 只要Action配置了自己的拦截器，全局的拦截器就失效 -->
+        	<interceptor-ref name="defaultStack"/>
+        	<!-- 配置结果类型 (当前Action中所有getter方法都作为响应数据) JSONResult类 -->
+        	<result type="json">
+        		<!-- JSONResult的setRoot方法 指定由哪个getResponseData方法返回响应数据 -->
+        		<param name="root">responseData</param>
+        	</result>
+        </action>
+        
+        <!-- 消息中心 -->
+        <action name="home">
+        	<result>/WEB-INF/jsp/home.jsp</result>
+        </action>
+        
+        <!-- 生成二维码 -->
+        <action name="barcode" class="cn.itcast.bos.action.BarcodeAction">
+        	<!-- 只要Action配置了自己的拦截器，全局的拦截器就失效 -->
+        	<interceptor-ref name="defaultStack"/>
+        </action>
+        
+        <!-- 异步生成当前用户的菜单 -->
+        <action name="loadUserMenu" class="cn.itcast.bos.action.LoadUserMenuAction">
+        	<result type="json">
+        		<param name="root">userMenuData</param>
+        		<param name="enableGZIP">true</param>
+        	</result>
+        </action>
+    </package>
+    
+    <!-- 导入Struts2模块级别配置文件 -->
+    <include file="struts2/struts-basic.xml"/>
+    <include file="struts2/struts-identity.xml"/>
+    <include file="struts2/struts-handlecenter.xml"/>
+     <include file="struts2/struts-portal.xml"/>
+</struts>

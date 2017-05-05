@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.pengrui.io1.File&apos; to &apos;LearnFile&apos;&#x0A;- Original project: &apos;d03.08&apos;&#x0A;- Original element: &apos;com.pengrui.io1.File&apos;&#x0A;- Renamed element: &apos;com.pengrui.io1.LearnFile&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;File&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.pengrui.io1{File.java[File" matchStrategy="1" name="LearnFile" qualified="false" references="true" similarDeclarations="false" stamp="1488943181951" textual="false" version="1.0"/>
+</session>

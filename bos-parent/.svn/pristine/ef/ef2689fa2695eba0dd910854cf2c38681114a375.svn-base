@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        				http://www.springframework.org/schema/beans/spring-beans.xsd
+        				http://www.springframework.org/schema/aop
+        				http://www.springframework.org/schema/aop/spring-aop.xsd
+        				http://www.springframework.org/schema/tx
+        				http://www.springframework.org/schema/tx/spring-tx.xsd
+        				http://www.springframework.org/schema/context
+        				http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- 配置会话管理器 -->
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+    	<!-- 设置SessionDAO -->
+    	<property name="sessionDAO" ref="sessionDAO"/>
+    	<!-- 开启SessionIdCookie会话对应的cookie可用 -->
+    	<property name="sessionIdCookieEnabled" value="true"/>
+    	<!-- 设置Session全局超时时间 按毫秒计算  1800000(30分钟) -->
+    	<property name="globalSessionTimeout" value="1800000"/>
+    	<!-- 设置是否删除失效的Session -->
+    	<property name="deleteInvalidSessions" value="true"/>
+    	<!-- 设置验证Session有效的定时器时间 1800000毫秒(30分钟) -->
+    	<property name="sessionValidationInterval" value="1800000"/>
+    </bean>
+    
+    <!-- 配置SessionDAO -->
+    <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO">
+    	<!-- 设置激活的session存储到缓存的名称 -->
+    	<property name="activeSessionsCacheName" value="shiro-activeSessionsCache"/>
+    </bean>
+    
+    <!-- 配置缓存管理器CacheManager -->
+    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+    	<!-- 设置自己的缓存配置文件 -->
+    	<property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+    </bean>
+    
+    
+    <!-- 配置Cookie 
+    	c:_0="bos_rememberMe" c:_1-ref="引用容器存的bean": 简化构造器注入 (设置cookie的名称)
+    	p:maxAge="604800"  设置cookie的过期时间 (按秒计算) 7天 
+    	<bean id="simpleCookie" class="org.apache.shiro.web.servlet.SimpleCookie"
+    		c:_0="bos_rememberMe"
+    		p:maxAge="604800"/>
+    -->
+    <bean id="simpleCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+    	<!-- 设置cookie的名称 -->
+		<constructor-arg value="bos_rememberMe"/>  
+		<!-- 设置cookie的过期时间 (按秒计算) 7天 -->
+		<property name="maxAge" value="604800"/>  	
+    </bean>
+    
+    <!-- 配置记住我管理器  -->
+    <bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+    	<!-- cookie值加密：设置AES加密的密钥(cipherKey)  
+    		建议每个项目都不一样(cipherKey要求是16位长度的字节数组)
+    		#{} SpEL 
+    	-->
+    	<property name="cipherKey" value="#{new org.apache.shiro.crypto.hash.Md5Hash('it520').getBytes()}"/>
+    	<!-- 设置记住用户需要的Cookie -->
+    	<property name="cookie" ref="simpleCookie"/>
+    </bean>
+    
+    
+    <!-- 配置密码凭证匹配器 -->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+    	<!-- 设置加密算法名称 -->
+    	<property name="hashAlgorithmName" value="md5"/>
+    	<!-- 设置加密迭代次数 -->
+    	<property name="hashIterations" value="5"/>
+    	<!-- 设置存储密码用16进制编码的字符串 -->
+    	<property name="storedCredentialsHexEncoded" value="true"/>
+    </bean>
+    
+    <!-- 配置安全数据源(自定义Realm) -->
+    <bean id="userAuthorizingRealm" class="cn.itcast.bos.realm.UserAuthorizingRealm">
+    	<!-- 设置密码凭证匹配器 -->
+    	<property name="credentialsMatcher" ref="credentialsMatcher"/>
+    	<!-- 设置开启缓存 -->
+    	<property name="cachingEnabled" value="true"/>
+    	<!-- 设置授权信息使用的缓存区名称 ehcache.xml  -->
+    	<property name="authorizationCacheName" value="shiro-authorizationCache"/>
+    </bean>
+    
+    <!-- 配置安全管理器 SecurityUtils.setSecurityManager()-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+    	<!-- 配置安全数据源(Realm) -->
+    	<property name="realm" ref="userAuthorizingRealm"/>
+    	<!-- 设置记住我管理器 -->
+    	<property name="rememberMeManager" ref="rememberMeManager"/>
+    	<!-- 配置缓存管理器 -->
+    	<property name="cacheManager" ref="cacheManager"/>
+    	<!-- 设置会话管理器 -->
+    	<property name="sessionManager" ref="sessionManager"/>
+    </bean>
+    
+	<!-- 配置Shiro处理请求的过滤器工厂bean 
+	      ShiroFilterFactoryBean作为Spring的委派过滤器
+	-->   
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<!-- 设置安全管理器SecurityManager -->
+		<property name="securityManager" ref="securityManager"/>
+		<!-- 没有通过身份认证的用户，需要跳转到loginUrl -->
+		<property name="loginUrl" value="/login.jsp"/>
+		<!-- 没有授权的用户，需要跳转到unauthorizedUrl -->
+		<property name="unauthorizedUrl" value="/unauthorized.jsp"/>
+		<!-- 配置过滤器链
+			/* : 对应的就请求地址：http://localhost:8080/bos/aa.jspx
+			/** : 对应的就请求地址：http://localhost:8080/bos/aa/dd/cc/dd.jspx
+			anon: 不需要身份认证就可以访问的资源
+			authc: 只要用户登录isAuthenticated()==true即可访问成功
+			user: 只要用户登录(isRemembered()==true or isAuthenticated()==true)即可访问成功
+			logout: 安全退出
+		 -->
+		<property name="filterChainDefinitions">
+			<value>
+				/css/** = anon
+				/images/** = anon
+				/js/** = anon
+				/logo.ico = anon
+				/verify.jspx = anon
+				/login.jspx = anon
+				/logout.jspx = logout
+				
+				/** = user
+			</value>
+		</property>
+	</bean> 
+	
+	<!-- 配置开启身份认证与授权注解
+		配置AuthorizationAttributeSourceAdvisor授权属性源切面类
+	 -->
+	<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<!-- 设置安全管理器SecurityManager byType的方式自动装配 -->
+		<property name="securityManager" ref="securityManager"/>
+	</bean>
+	<!-- 配置Action用哪种方式产生代理对象
+		cglib: 代理的类可以没有实现接口
+		jdk自带的Proxy (代理的类必须有接口)
+	 -->
+	<aop:config proxy-target-class="true"/>
+	
+	
+</beans>

@@ -1,0 +1,25 @@
+{"total" : 4, "rows" : [
+			{"id": 1, "name" : "职员", "remark" : "职员"},
+			{"id": 2, "name" : "Java中级工程师", "remark" : "Java中级工程师"},
+			{"id": 3, "name" : "Java高级工程师", "remark" : "Java高级工程师"},
+			{"id": 4, "name" : "Java架构师", "remark" : "Java架构师"}
+		  ]
+}
+
+[{},{}] : List<Map<String,Object>>
+[{},{}] : List<Job>
+
+Map<String,Object>
+
+{"total":5,"rows":[
+	{"jobName":"系统管理员","birthday":"2016-10-04T00:00:00","deptName":"技术部","phone":"13687987898","sex":2,"name":"柳岩","salary":8798.85,"userId":"admin","email":"admin@163.com","status":1},
+	{"jobName":"Java中级工程师","birthday":"2016-10-07T00:00:00","deptName":"人事部","phone":"13688888889","sex":2,"name":"李琴","salary":8500.95,"userId":"admin1","email":"admin1@163.com","status":1},
+	{"jobName":"Java高级工程师","birthday":"2016-10-02T00:00:00","deptName":"人事部","phone":"13988888888","sex":1,"name":"李强","salary":7500.05,"userId":"admin2","email":"admin2@163.com","status":1},
+	{"jobName":"职员","birthday":"2016-09-26T00:00:00","deptName":"人事部","phone":"13988888888","sex":1,"name":"李小兵","salary":9000.8,"userId":"admin3","email":"admin3@163.com","status":1},
+	{"jobName":"经理","birthday":"1986-08-23T00:00:00","deptName":"人事部","phone":"13788888888","sex":1,"name":"李民","salary":8700.88,"userId":"limin","email":"limin@163.ccom","status":1}]}
+
+	
+{"total":2,"rows":[
+	{"city":"北京市","cityCode":"beijing","district":"东城区","id":"110101","pCD":"北京北京东城","postCode":"100000","province":"北京市","shortCode":"BJBJDC"},
+	{"city":"北京市","cityCode":"beijing","district":"西城区","id":"110102","pCD":"北京北京西城","postCode":"100000","province":"北京市","shortCode":"BJBJXC"}]}
+	

@@ -1,0 +1,22 @@
+package com.qing.pojo;
+
+import java.util.List;
+
+public class Results {
+	private List<LocationNow> results;
+
+	public List<LocationNow> getResult() {
+		return result;
+	}
+
+	public void setResult(List<LocationNow> result) {
+		this.result = result;
+	}
+
+	@Override
+	public String toString() {
+		return "Results [result=" + result + "]";
+	}
+	
+	
+}

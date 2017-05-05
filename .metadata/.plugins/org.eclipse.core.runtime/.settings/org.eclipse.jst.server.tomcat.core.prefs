@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+locationorg.eclipse.jst.server.tomcat.runtime.70=/user/local/tomcat-7.0.75
+locationorg.eclipse.jst.server.tomcat.runtime.85=/user/local/tomcat
+locationorg.eclipse.jst.server.tomcat.runtime.90=/user/local/tomcat-9.0.0.M17

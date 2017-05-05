@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.pengrui.mybatis.mapping.userMapper">
+	
+	<resultMap type="user" id="usermap">
+		<id column="id" property="id" jdbcType="INTEGER"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="gender" property="gender" jdbcType="VARCHAR"/>
+		<result column="mobile_phone" property="phone" jdbcType="VARCHAR"/>
+		<collection property="projects" javaType="ArrayList" column="id" ofType="Project" 
+		select="com.pengrui.mybatis.mapping.projectMapper.selectSafe" />
+	</resultMap>
+	<select id="selectBy" parameterType="int" resultMap="usermap">
+	select * from `user` where id = #{id}
+	</select>
+	<select id="selectAll" resultMap="usermap">
+	select * from `user`
+	</select>
+	
+	<resultMap type="user" id="userSafeMap">
+		<id column="id" property="id" jdbcType="INTEGER"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="gender" property="gender" jdbcType="VARCHAR"/>
+		<result column="mobile_phone" property="phone" jdbcType="VARCHAR"/>
+	</resultMap>
+	<select id="selectSafe" parameterType="int" resultMap="userSafeMap">
+	select * from `user` where id = #{id}
+	</select>
+</mapper>

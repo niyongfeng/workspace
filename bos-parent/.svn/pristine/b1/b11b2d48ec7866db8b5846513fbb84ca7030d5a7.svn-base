@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="handlecenter" namespace="/handlecenter" extends="bos">
+    
+		<!-- ################ 发货单管理 ################### -->
+		<!-- 跳转到发货查询的页面 -->
+		<action name="showSendGoodsBill" class="cn.itcast.bos.action.handlecenter.SendGoodsBillAction" 
+				method="showSendGoodsBill">
+			<result>/WEB-INF/jsp/handlecenter/sendGoodsBill.jsp</result>
+		</action>
+		
+		<!-- 分页查询发货单 -->
+		<action name="selectSendGoodsBill" class="cn.itcast.bos.action.handlecenter.SendGoodsBillAction" 
+				method="selectSendGoodsBill"/>
+		
+    </package>
+    
+</struts>

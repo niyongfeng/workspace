@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.pengrui.mybatis.mapping.userMapper">
+	
+	<resultMap type="user" id="usermap">
+		<id column="id" property="id" jdbcType="INTEGER"/>
+		<result column="name" property="name" jdbcType="VARCHAR"/>
+		<result column="gender" property="gender" jdbcType="VARCHAR"/>
+		<result column="mobile_phone" property="phone" jdbcType="VARCHAR"/>
+		<collection property="projects" javaType="ArrayList" column="id" ofType="project" select="com.pengrui.mybatis.mapping.projectMapper.selectById" />
+	</resultMap>
+	<!-- 数据库表中的ID自增长，设置ID属性可以获得ID值 -->
+	<insert id = "insertOne" parameterType = "user" keyProperty="id" useGeneratedKeys="true">
+	insert into `user` (name,gender,company,mobile_phone) values (#{name}, #{gender}, #{company}, #{phone})
+	</insert>
+	<!-- 数据库中的ID自增长，不设置ID属性无法获得ID值 -->
+	<insert id="insertNoUserId" parameterType = "user">
+	insert into `user` (name,gender,company,mobile_phone) values (#{name}, #{gender}, #{company}, #{phone})
+	</insert>
+	<!-- 设置ID属性值，并给其赋值，当数据库ID值为自增长时，以自增长为准则 -->
+	<insert id="insertUserId" parameterType = "user" keyProperty="id" useGeneratedKeys="true">
+	insert into `user` (id,name,gender,company,mobile_phone) values (#{id}, #{name}, #{gender}, #{company}, #{phone})
+	</insert>
+	<!-- 不设置ID属性值，但给其赋值，当数据库ID值为自增长时，以赋值为准则 -->
+	<insert id="insertNoUserId2" parameterType = "user">
+	insert into `user` (id,name,gender,company,mobile_phone) values (#{id}, #{name}, #{gender}, #{company}, #{phone})
+	</insert>
+	<delete id="deleteOfId" parameterType = "user">
+	delete from `user` where id = #{id}
+	</delete>
+	<update id="updateOfId" parameterType = "user">
+	update `user` set name = #{name}, gender = #{gender}, company = #{company}, mobile_phone = #{phone}
+	where id = #{id}
+	</update>
+	<select id="selectOne" parameterType = "int" resultType="hashMap">
+	select * from `user` where id = #{id}
+	</select>
+	<select id="selectAll" resultType= "user"> 
+	select * from `user`
+	</select>
+	<select id="selectAllOfmap" parameterType = "int" resultMap="usermap"> 
+	select * from `user` where id = #{id}
+	</select>
+	
+	<select id="selectPro" parameterType = "int" resultMap="usermap">
+	select * from `user` where id = #{id}
+	</select>
+</mapper>

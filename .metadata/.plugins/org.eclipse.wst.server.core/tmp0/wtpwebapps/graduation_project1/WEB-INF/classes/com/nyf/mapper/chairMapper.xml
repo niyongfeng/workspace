@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nyf.dao.ChairDao">
+	<resultMap type="Chair" id="chairMap">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="activity_time" property="activity_time"
+			jdbcType="TIMESTAMP" />
+		<result column="description" property="description" jdbcType="VARCHAR" />
+		<result column="chair_professor" property="chair_professor"
+			jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="release_time" property="release_time" jdbcType="TIMESTAMP" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="login_id" property="login_id" jdbcType="INTEGER"/>
+	</resultMap>
+	<insert id="insert" parameterType="chair">
+		insert into
+		chair(activity_time,description,chair_professor,address,login_id) value
+		(#{activity_time},#{description},#{chair_professor},#{address},#{login_id})
+	</insert>
+	<delete id="delete" parameterType="int">
+		update chair set status = 0 where
+		id = #{id}
+	</delete>
+	<update id="update" parameterType="chair">
+		<trim prefixOverrides=",">
+			update chair set
+			<if test="activity_time != null">activity_time = #{activity_time}</if>
+			<if test="description != null">,description = #{description}</if>
+			<if test="chair_professor != null">,chair_professor = #{chair_professor}</if>
+			<if test="address != null">,address = #{address}</if>
+			<if test="status != 2">,status = #{status}</if>
+			,release_time = #{release_time}
+			where id = #{id}
+		</trim>
+	</update>
+	<select id="selectAll" resultMap="chairMap">
+		select * from chair where
+		status = 1 order by activity_time
+	</select>
+	<select id="selectAllByman" resultMap="chairMap">
+		select * from chair order by activity_time
+	</select>
+	<select id="selectByLogin_id" parameterType="int" resultMap="chairMap">
+		select * from chair where
+		login_id = #{login_id} order by activity_time
+	</select>
+	<select id="selectById" parameterType="int" resultMap="chairMap">
+		select * from chair where
+		id = #{id} order by activity_time
+	</select>
+	<select id="selectByString" parameterType="string" resultMap="chairMap">
+		select * from chair where (description like "%"#{description}"%" or
+		chair_professor like "%"#{chair_professor}"%" or address like
+		"%"#{address}"%") and status = 1 order by activity_time
+	</select>
+	<select id="selectByStringAndLoginId" parameterType="string" resultMap="chairMap">
+		select * from chair where (description like "%"#{description}"%" or
+		chair_professor like "%"#{chair_professor}"%" or address like
+		"%"#{address}"%") order by activity_time
+	</select>
+	<!-- 查询时间段？？？？？ -->
+	<!-- <select id="selectByTime" parameterType="ArrayList<Date>" resultMap="chairMap"> 
+		select * from chair between activity_time >= #{} </select> -->
+</mapper>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pengrui.dao.ProjectDao">
+	<resultMap type="project" id="projectMap">
+		<id column="code" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="description" property="description" jdbcType="BLOB" />
+		<result column="apply_time" property="time" jdbcType="TIME" />
+		<result column="user_id" property="userId" jdbcType="INTEGER" />
+		<!-- <association property="user" column="user_id" javaType="user"
+			select="com.pengrui.dao.UserDao.selectById"></association> -->
+	</resultMap>
+	<select id="selectById" parameterType="INTEGER" resultMap="projectMap">
+		select * from project where code = #{id}
+	</select>
+	<select id="selectByUserId" parameterType="INTEGER" resultMap="projectMap">
+		select * from project where user_id = #{userId}
+	</select>
+	<select id="select" parameterType="project" resultMap="projectMap">
+		select * from project where 1=1
+		<if test="id != null">
+			and code = #{id}
+		</if>
+		<if test="name != null">
+			and name = #{name}
+		</if>
+		<if test="description != null">
+			and description = #{description}
+		</if>
+		<if test="time != null">
+			and apply_time = #{time}
+		</if>
+		<if test="userId != null">
+			and user_id = #{userId}
+		</if>
+	</select>
+	<insert id="insert" parameterType="project">
+		insert into
+		project(code,name,description,
+		<if test="time != null">apply_time,</if>
+		user_id) value(#{id},#{name},#{description},
+		<if test="time != null">#{time},</if>
+		#{userId})
+	</insert>
+	<delete id="delete" parameterType="project">
+		delete from project
+		<trim prefix="where" prefixOverrides="and|or">
+			<if test="id != null">
+				and code = #{id}
+			</if>
+			<if test="name != null">
+				and name = #{name}
+			</if>
+			<if test="description != null">
+				and description = #{description}
+			</if>
+			<if test="time != null">
+				and apply_time = #{time}
+			</if>
+			<if test="userId != null">
+				and user_id = #{userId}
+			</if>
+		</trim>
+	</delete>
+	<update id="update" parameterType="project">
+		update project set
+		<trim prefixOverrides=",">
+			<if test="name != null">name = #{name}</if>
+			<if test="description != null">,description = #{description}</if>
+			<if test="time != null">,apply_time = #{time}</if>
+			<if test="userId != null">,user_id = #{userId}</if>
+			where code = #{id}
+		</trim>
+	</update>
+</mapper>

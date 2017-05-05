@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nyf.dao.QuestionDao">
+	<resultMap type="Question" id="questionMap">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="question" property="question" jdbcType="VARCHAR" />
+		<result column="answer" property="answer" jdbcType="VARCHAR" />
+		<result column= "login_id" property="login_id" jdbcType="INTEGER"></result>
+	</resultMap>
+	<insert id="insert" parameterType="Question">
+		insert into questions(question,login_id) value (#{question},#{login_id})
+	</insert>
+	<select id="selectByString" parameterType="string" resultMap="questionMap">
+		select * from questions where question like "%"#{question}"%" or answer like
+		"%"#{answer}"%"
+	</select>
+	<update id="update" parameterType="Question">
+		update questions set answer = #{answer}
+		where question = #{question}
+	</update>
+	<select id="selectAll"  resultMap="questionMap">
+	select * from questions
+	</select>
+	<select id="selectByLogin_id"  parameterType="int" resultMap="questionMap">
+	select * from questions where login_id = #{login_id}
+	</select>
+	<delete id="delete" parameterType="int">
+	delete from questions where id = #{id}
+	</delete>
+	<select id="selectById" parameterType="int" resultMap="questionMap">
+		select * from questions where id = #{id}
+	</select>
+</mapper>

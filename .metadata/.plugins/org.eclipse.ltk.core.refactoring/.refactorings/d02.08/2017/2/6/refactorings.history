@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.pengrui.array2dtest.Array2DTest&apos; to &apos;ArrayTest&apos;&#x0A;- Original project: &apos;d2.8&apos;&#x0A;- Original element: &apos;com.pengrui.array2dtest.Array2DTest&apos;&#x0A;- Renamed element: &apos;com.pengrui.array2dtest.ArrayTest&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Array2DTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.pengrui.array2dtest{Array2DTest.java[Array2DTest" matchStrategy="1" name="ArrayTest" qualified="false" references="true" similarDeclarations="false" stamp="1486545219199" textual="false" version="1.0"/>
+</session>

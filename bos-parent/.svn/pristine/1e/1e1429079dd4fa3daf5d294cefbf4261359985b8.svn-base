@@ -1,0 +1,88 @@
+package cn.itcast.bos.action.basic;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
+import cn.itcast.bos.pojo.PageModel;
+import cn.itcast.bos.service.basic.BasicService;
+
+import com.alibaba.fastjson.JSON;
+import com.opensymphony.xwork2.ActionSupport;
+
+/**
+ * 基础数据模块基础的控制器
+ * @author LEE.SIU.WAH
+ * @email lixiaohua7@163.com
+ * @date 2017年1月20日 上午10:20:27
+ * @version 1.0
+ */
+public class BasicAction extends ActionSupport {
+	
+	private static final long serialVersionUID = -2069415316197683673L;
+	/** 注入业务层 */
+	protected BasicService basicService;
+	/** 定义分页实体 */
+	protected PageModel pageModel = new PageModel();
+	/** 定义Map集合返回响应数据 */
+	private Map<String,Object> responseData = new HashMap<>();
+	/** 定义状态码 */
+	private int tipStatus;
+	
+	/** 向浏览器输出响应数据 */
+	public void writeResponseDataPage(List<?> data){
+		/** 封装datagrid组件需要的分页数据 */
+		responseData.put("total", pageModel.getRecordCount());
+		responseData.put("rows", data);
+		/** 把Map集合解析成json格式字符串 */
+		String jsonData = JSON.toJSONString(responseData);
+		System.out.println("jsonData: " + jsonData);
+		/** 获取响应对象 */
+		HttpServletResponse response = ServletActionContext.getResponse();
+		/** 设置响应内容类型 */
+		response.setContentType("text/html;charset=utf-8");
+		/** 向浏览器输出响应数据 */
+		try {
+			response.getWriter().print(jsonData);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	/** 向浏览器输出响应数据 */
+	public void writeResponseDataStr(String data){
+		/** 获取响应对象 */
+		HttpServletResponse response = ServletActionContext.getResponse();
+		/** 设置响应内容类型 */
+		response.setContentType("text/html;charset=utf-8");
+		/** 向浏览器输出响应数据 */
+		try {
+			response.getWriter().print(data);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/** setter and getter method */
+    /** 当前页码 */
+    public void setPage(int page){
+    	pageModel.setPageIndex(page);
+    }
+    /** 每页显示的记录条数 */
+    public void setRows(int rows){
+    	pageModel.setPageSize(rows);
+    }
+	public int getTipStatus() {
+		return tipStatus;
+	}
+	public void setTipStatus(int tipStatus) {
+		this.tipStatus = tipStatus;
+	}
+	public void setBasicService(BasicService basicService) {
+		this.basicService = basicService;
+	}
+}

@@ -1,0 +1,47 @@
+package cn.itcast.bos.action.basic;
+
+import java.util.List;
+
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+
+import cn.itcast.bos.entity.basic.SubArea;
+
+/**
+ * 分区管理控制器
+ * @author LEE.SIU.WAH
+ * @email lixiaohua7@163.com
+ * @date 2017年2月8日 下午5:00:12
+ * @version 1.0
+ */
+public class SubAreaAction extends BasicAction {
+	
+	private static final long serialVersionUID = -3292813764571941142L;
+	/** 定义分区实体 */
+	private SubArea subArea;
+
+	/** 跳转到分页查询页面 */
+	@RequiresPermissions("subarea:view")
+	public String showSelectSubArea(){
+		return SUCCESS;
+	}
+	
+	/** 多条件分页查询分区 */
+	@RequiresPermissions("subarea:view")
+	public String selectSubArea(){
+		try{
+			List<SubArea> data =  basicService.getSubAreaByPage(subArea, pageModel);
+			writeResponseDataPage(data, "staff","pCD");
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		return NONE;
+	}
+
+	/** setter and getter method */
+	public SubArea getSubArea() {
+		return subArea;
+	}
+	public void setSubArea(SubArea subArea) {
+		this.subArea = subArea;
+	}
+}

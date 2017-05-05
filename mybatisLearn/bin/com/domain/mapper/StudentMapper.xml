@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.domain.dao.StudentDao">
+  	<resultMap type="student" id="BaseMap">
+  		<id column="id" property="id" jdbcType="INTEGER"/>
+  		<result column="name" property="name" jdbcType="VARCHAR"/>
+  		<association property="clazz" column="clazz_id" javaType="clazz" select="com.domain.dao.ClazzDao.selectById"/>
+  	</resultMap>
+  	
+  	<select id="selectALL" resultMap="BaseMap">
+  		select * from student;
+  	</select>
+  	
+  	<select id="selectByClazzId" parameterType="int" resultMap="BaseMap">
+  		select * from student where clazz_id=#{id};
+  	</select>
+  	
+  	<select id="selectById" parameterType="int" resultMap="BaseMap">
+  		select * from student where id = #{id};
+  	</select>
+  	
+  	<insert id="insert" parameterType="student"  keyColumn="id" useGeneratedKeys="true">
+  		insert into student(name,clazz_id) value(#{name},#{clazz.id});
+  	</insert>
+  	
+  	<delete id="delete" parameterType="student">
+  	 	delete from student where id = #{id};
+  	</delete>
+  	
+  	<update id="update" parameterType="student" useGeneratedKeys="true" keyColumn="id">
+  		update student set name = #{name},clazz_id=#{clazz.id} where id = #{id};
+  	</update>
+  </mapper>

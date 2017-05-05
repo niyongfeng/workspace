@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="com.domain.pojo"/>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				 <property name="driver" value="com.mysql.jdbc.Driver"/>
+		         <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis?useSSL=false"/>
+		         <property name="username" value="root"/>
+		         <property name="password" value="921104nyf"/>
+			</dataSource>
+		</environment>
+		<environment id="production">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				 <property name="driver" value="com.mysql.jdbc.Driver"/>
+		         <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis?useSSL=false"/>
+		         <property name="username" value="root"/>
+		         <property name="password" value="root"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/domain/mapper/ClazzMapper.xml"/>
+		<mapper resource="com/domain/mapper/StudentMapper.xml"/>
+		<mapper resource="com/domain/mapper/TeacherMapper.xml"/>
+		<!-- <mapper class="com.domain.dao.ClazzDao"/>
+		<mapper class="com.domain.dao.TeacherDao"/>
+		<mapper class="com.domain.dao.StudentDao"/> -->
+	</mappers>
+	
+</configuration>

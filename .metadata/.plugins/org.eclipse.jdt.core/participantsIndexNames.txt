@@ -1,0 +1,5 @@
+INDEX VERSION 1.129
+/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2089348824.index
+/test/src
+/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2983514377.index
+/d03.08/src

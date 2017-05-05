@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id ="baseDao" class = "com.qingke.easyjava.datasource.BaseDao">
+	<property name="dataSource">
+	<ref bean="dataSource"/>
+	</property>
+	</bean>
+	<bean id = "dataSource" class ="org.springframework.jdbc.datasource.DriverManagerDataSource" singleton ="true">
+		<property name = "driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name = "url" value="jdbc:mysql://localhost:3306/mybatis?useSSL=false"></property>
+		<property name = "username" value="root"></property>
+		<property name="password" value="921104nyf"/>
+	</bean>
+	
+	<bean id = "dataSource2" class ="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+	<property name = "driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name = "url" value="jdbc:mysql://localhost:3306/mybatis?useSSL=false"></property>
+		<property name = "username" value="root"></property>
+		<property name="password" value="921104nyf"/>
+	</bean>
+	<bean id = "dataSource3" class ="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" singleton ="true">
+	<property name = "driverClass" value="com.mysql.cj.jdbc.Driver" />
+		<property name = "jdbcUrl" value="jdbc:mysql://localhost:3306/mybatis?useSSL=false"></property>
+		<property name = "user" value="root"></property>
+		<property name="password" value="921104nyf"/>
+	</bean>
+	
+</beans>

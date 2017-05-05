@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nyf.dao.UserDao">
+	<resultMap type="user" id="userMap">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="student_number" property="student_number"
+			jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="gender" property="gender" jdbcType="VARCHAR" />
+		<result column="major" property="major" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="age" property="age" jdbcType="INTEGER" />
+		<result column="login_id" property="login_id" jdbcType="INTEGER" />
+	</resultMap>
+	<insert id="insert" parameterType="user">
+		insert into
+		user(student_number,name,gender,major,phone,email) value
+		(#{student_number},#{name},#{gender},#{major},#{phone},#{email})
+	</insert>
+	<delete id="delete" parameterType="int">
+		update user status = 0 where
+		id = #{id}
+	</delete>
+	<update id="update" parameterType="user">
+		<trim prefixOverrides=",">
+			update user set
+			<!-- <if test="name != null">name = #{name}</if> -->
+			<if test="major != null">major = #{major}</if>
+			<if test="age != null">,age = #{age}</if>
+			<if test="gender != null">,gender = #{gender}</if>
+			<if test="phone != null">,phone = #{phone}</if>
+			<if test="email != null">,email = #{email}</if>
+			where name = #{name} and student_number = #{student_number}
+		</trim>
+	</update>
+	<select id="selectAll" resultMap="userMap">
+		select * from user
+	</select>
+	<select id="selectById" parameterType="int" resultMap="userMap">
+		select * from user where id = #{id}
+	</select>
+	<select id="selectByStudentNumber" parameterType="string"
+		resultMap="userMap">
+		select * from user where student_number like
+		"%"#{student_number}"%"
+	</select>
+	<select id="selectByName" parameterType="string" resultMap="userMap">
+		select * from user where name like "%"#{name}"%"
+	</select>
+	<select id="selectByGender" parameterType="string" resultMap="userMap">
+		select * from user where gender = #{gender}
+	</select>
+	<select id="selectByMajor" parameterType="string" resultMap="userMap">
+		select * from user where major like "%"#{major}"%"
+	</select>
+	<select id="selectByPhone" parameterType="string" resultMap="userMap">
+		select * from user where phone like "%"#{phone}"%"
+	</select>
+	<select id="selectByEmail" parameterType="string" resultMap="userMap">
+		select * from user where email like "%"#{email}"%"
+	</select>
+	<select id="selectByStatus" parameterType="int" resultMap="userMap">
+		select * from user where status = #{status}
+	</select>
+	<select id="selectByLogin_id" parameterType="int" resultMap="userMap">
+		select * from user where login_id = #{login_id}
+	</select>
+</mapper>

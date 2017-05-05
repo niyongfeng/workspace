@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>d03.21</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/com/pengrui/test/DomXpathEvaluator.java</name>
+			<type>1</type>
+			<location>/Users/niyongfeng/Downloads/XmlXpath/src/com/qingke/easyjava/sample/DomXpathEvaluator.java</location>
+		</link>
+		<link>
+			<name>src/com/pengrui/test/JDomXpathEvaluator.java</name>
+			<type>1</type>
+			<location>/Users/niyongfeng/Downloads/XmlXpath/src/com/qingke/easyjava/sample/JDomXpathEvaluator.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

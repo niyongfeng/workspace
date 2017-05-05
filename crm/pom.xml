@@ -1,0 +1,161 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		 					 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.itcast</groupId>
+	<artifactId>crm</artifactId>
+	<version>1.0.0-RELEASE</version>
+	<packaging>war</packaging>
+	
+	<!-- 全局的属性配置 -->
+	<properties>
+		<project.source.encoding>utf-8</project.source.encoding>
+		<junit.version>4.11</junit.version>
+		<jsp.api.version>7.0.65</jsp.api.version>
+		<jstl.version>1.2</jstl.version>
+		<spring.version>4.3.3.RELEASE</spring.version>
+		<aspectjweaver.version>1.8.8</aspectjweaver.version>
+		<struts2.version>2.3.31</struts2.version>
+		<c3p0.version>0.9.5.2</c3p0.version>
+		<mysql.version>5.1.38</mysql.version>
+		<cxf.version>3.0.12</cxf.version>
+		 <fastjson.version>1.2.20</fastjson.version>
+	</properties>
+	
+	<!-- 配置项目jar包的依赖 -->
+	<dependencies>
+		<!-- junit4 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<!-- 保留到测试 -->
+			<scope>test</scope>
+		</dependency>
+		<!-- jsp-api、servlet-api、el-api -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<version>${jsp.api.version}</version>
+			<!-- 指定这三个jar包由tomcat7容器提供 -->
+			<scope>provided</scope>
+		</dependency>
+		<!-- jstl -->
+		<dependency>
+		    <groupId>jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>${jstl.version}</version>
+		</dependency>
+		
+		<!-- Spring4.3.3 -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-web</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<!-- Spring JDBC -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+		<!-- aspectjweaver -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>${aspectjweaver.version}</version>
+		</dependency>
+		
+		<!-- Struts2 -->
+		<dependency>
+		    <groupId>org.apache.struts</groupId>
+		    <artifactId>struts2-core</artifactId>
+		    <version>${struts2.version}</version>
+		</dependency>
+		<!-- Struts2与Spring4整合的插件包 -->
+		<dependency>
+		    <groupId>org.apache.struts</groupId>
+		    <artifactId>struts2-spring-plugin</artifactId>
+		    <version>${struts2.version}</version>
+		</dependency>
+		
+		<!-- c3p0 -->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+		</dependency>
+		<!-- mysql驱动 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>${cxf.version}</version>
+	    </dependency>
+	    <dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${cxf.version}</version>
+	    </dependency>
+	    
+	    <!-- 配置fastjson的jar包 -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>${fastjson.version}</version>
+		</dependency>
+		
+	</dependencies>
+	
+	<!-- 构建元素 -->
+	<build>
+		<!-- 配置插件 -->
+		<plugins>
+			<!-- 编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<!-- 修改配置信息 -->
+				<configuration>
+					<!-- 源代码编译级别 -->
+					<source>1.7</source>
+					<!-- 打包时的编译级别 -->
+					<target>1.7</target>
+					<!-- 指定源代码编码 -->
+					<encoding>${project.source.encoding}</encoding>
+				</configuration>
+			</plugin>
+			<!-- 配置tomcat7插件 -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<!-- 配置访问路径 -->
+					<path>/crm</path>
+					<!-- 端口号 -->
+					<port>8888</port>
+					<!-- 热部署 -->
+					<contextReloadable>true</contextReloadable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<!-- 部署元素 -->
+	<distributionManagement>
+		<!-- 配置发行版仓库 -->
+		<repository>
+			<id>itcast</id>
+			<name>itcast</name>
+			<url>http://localhost:8081/nexus/content/repositories/itcast/</url>
+		</repository>
+	</distributionManagement>
+	
+</project>

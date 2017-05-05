@@ -1,0 +1,7 @@
+package com.qingke.tianqi;
+
+public class weather {
+	public String getWeather(String city) {
+		return "晴";
+	}
+}

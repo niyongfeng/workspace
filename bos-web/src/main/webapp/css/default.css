@@ -1,0 +1,23 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, span, a, blockquote, th {margin:0;padding:0}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal;}
+html, body, #wrapper {height: 100%;}
+body {
+	BACKGROUND-COLOR: #fff; COLOR: #000
+}
+body, table {
+	LINE-HEIGHT: 150%; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; FONT-SIZE: 12px
+}
+input, select, textarea {
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; FONT-SIZE: 12px
+}
+a:link,a:visited{color:#036; text-decoration:none;}
+a:hover,a:active{color:#ff0000; text-decoration:underline;}
+textarea {
+    border: 1px solid #7F9DB9;
+    padding: 2px;
+}
+textarea:focus {
+    -moz-box-shadow: 0 0 2px 0 #95B8E7;
+    -webkit-box-shadow: 0 0 2px 0 #95B8E7;
+    box-shadow: 0 0 2px 0 #95B8E7;
+}

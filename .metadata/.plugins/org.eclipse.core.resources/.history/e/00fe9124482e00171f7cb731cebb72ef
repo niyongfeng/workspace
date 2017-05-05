@@ -1,0 +1,40 @@
+package com.qingke.tianqi;
+
+import java.util.Scanner;
+
+import com.qing.pojo.LocationNow;
+import com.qing.pojo.Results;
+
+public class TestWeather {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		weather w = new weather();
+		while(true) {
+			System.out.println("请输入需要查询的城市天气(exit退出程序)：");
+			String str = sc.nextLine();
+			if("exit".equals(str)) {
+				break;
+			}
+			print(w.getResult(str));
+			
+		}
+		
+		
+		
+		
+	}
+	
+	public static void print(Results results) {
+		if(results.getResult().size() != 0) {
+		LocationNow ln = results.getResult().get(0);
+		System.out.println("城市：" + ln.getLocation().getName());
+		System.out.println("国家：" + ln.getLocation().getCountry());
+		System.out.println("地点：" + ln.getLocation().getPath());
+		System.out.println("时区：" + ln.getLocation().getTimezone_offset());
+		System.out.println("天气：" + ln.getNow().getText());
+		System.out.println("温度：" + ln.getNow().getTemperature());
+		System.out.println("最近更新：" + ln.getLast_update());
+		}
+	}
+}
+

@@ -1,0 +1,7 @@
+package com.qingke.tianqi;
+
+public class TestWeather {
+	public static void main(String[] args) {
+		Weather w = new Weather();
+	}
+}

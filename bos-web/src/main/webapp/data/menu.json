@@ -1,0 +1,6 @@
+[{"title" : "系统管理", "subMenu" : [
+					{"id": 1, "pId" : 0, "name" : "用户管理", "href" : "/identity/showSelectUser.jspx"},
+					{"id": 2, "pId" : 0, "name" : "角色管理", "href" : "/identity/showSelectRole.jspx"}]},
+ {"title" : "基础数据", "subMenu" : [
+					{"id": 1, "pId" : 0, "name" : "取派员管理", "href" : "/identity/showSelectUser.jspx"},
+					{"id": 2, "pId" : 0, "name" : "区域管理", "href" : "/identity/showSelectRole.jspx"}]}]

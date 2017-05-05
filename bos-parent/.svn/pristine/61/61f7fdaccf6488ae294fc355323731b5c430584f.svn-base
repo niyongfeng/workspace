@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<!-- 配置初始化SessionFactory需要的属性 -->
+	<session-factory>
+		<!-- 数据库方言 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<!-- 显示SQL语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- 格式化SQL语句 -->
+		<property name="hibernate.format_sql">true</property>
+		<!-- 支持自动创建表 -->
+		<!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+		
+		<!-- 配置映射文件 xxx.hbm.xml | 配置持久化类 (jpa)-->
+		
+	</session-factory>
+</hibernate-configuration>

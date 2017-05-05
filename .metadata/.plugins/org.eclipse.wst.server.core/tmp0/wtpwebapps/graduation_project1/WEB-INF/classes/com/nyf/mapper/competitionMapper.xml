@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nyf.dao.CompetitionDao">
+	<resultMap type="competition" id="competitionMap">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="activity_time" property="activity_time"
+			jdbcType="TIMESTAMP" />
+		<result column="description" property="description" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="apply_time" property="apply_time" jdbcType="TIMESTAMP" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="login_id" property="login_id" jdbcType="INTEGER" />
+	</resultMap>
+	<insert id="insert" parameterType="competition">
+		insert into
+		competition(activity_time,description,address) value
+		(#{activity_time},#{description},#{address})
+	</insert>
+	<delete id="delete" parameterType="int">
+		update competition set status
+		= 0 where id = #{id}
+	</delete>
+	<update id="update" parameterType="competition">
+		<trim prefixOverrides=",">
+			update competition set
+			<if test="activity_time != null">activity_time = #{activity_time}</if>
+			<if test="description != null">,description = #{description}</if>
+			<if test="address != null">,address = #{address}</if>
+			<if test="status != 2">,status = #{status}</if>
+			,apply_time = #{apply_time}
+			where id = #{id}
+		</trim>
+	</update>
+	<select id="selectAll" resultMap="competitionMap">
+		select * from competition where
+		status = 1 order by activity_time
+	</select>
+	<select id="selectAllByman" resultMap="competitionMap">
+		select * from competition order by activity_time
+	</select>
+	<select id="selectByLogin_id" parameterType="int" resultMap="competitionMap">
+		select * from competition where
+		login_id = #{login_id} order by activity_time
+	</select>
+	<select id="selectById" parameterType="int" resultMap="competitionMap">
+		select * from competition where
+		id = #{id} order by activity_time
+	</select>
+	<select id="selectByString" parameterType="string" resultMap="competitionMap">
+		select * from competition where (description like "%"#{description}"%"
+		or
+		address like "%"#{address}"%") and status = 1 order by activity_time
+	</select>
+	<select id="selectByStringAndLoginId" parameterType="string" resultMap="competitionMap">
+		select * from competition where (description like "%"#{description}"%"
+		or
+		address like "%"#{address}"%") order by activity_time
+	</select>
+	<!-- 查询时间段？？？？？ -->
+	<!-- <select id="selectByTime" parameterType="ArrayList<Date>" resultMap="chairMap"> 
+		select * from chair between activity_time >= #{} </select> -->
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.domain.dao.ClazzDao">
+  	<resultMap type="clazz" id="BaseMap">
+  		<id column="id" property="id" jdbcType="INTEGER"/>
+  		<result column="name" property="name" jdbcType="VARCHAR"/>
+  		<association property="teacher" column="teacher_id" javaType="teacher" select="com.domain.dao.TeacherDao.selectById"/>
+  		<collection property="students" column="id" ofType="student" select="com.domain.dao.StudentDao.selectByClazzId"/>
+  		<!-- <collection property="students" ofType="student">
+  			<id column="id" property="id"/>
+  			<result column="name" property="name"/>
+  		</collection> -->
+  	</resultMap>
+  	<select id="selectAll" resultMap="BaseMap">
+  		select * from clazz;
+  	</select>
+  	
+  	<select id="selectById" parameterType="int" resultMap="BaseMap">
+  		select * from clazz where id = #{id};
+  	</select>
+  	
+  	<insert id="insert" parameterType="clazz"  keyColumn="id" useGeneratedKeys="true">
+  		insert into clazz(name,teacher_id) value(#{name},#{teacher.id});
+  	</insert>
+  	
+  	<delete id="delete" parameterType="clazz">
+  	 	delete from clazz where id = #{id};
+  	</delete>
+  	
+  	<update id="update" parameterType="clazz" useGeneratedKeys="true" keyColumn="id">
+  		update clazz set name = #{name},teacher_id=#{teacher.id} where id = #{id};
+  	</update>
+  </mapper>

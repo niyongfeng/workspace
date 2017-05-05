@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+loadData();
+
+function loadData() {
+	$.ajax({
+		type : "get",
+		url : "VolunteerActivityServlet",
+		timeout : 20000,
+		cache : false,
+		dataType:'json',
+		success : function(data, textStatus) {
+			jsonToHtml(data);
+		},
+		error : function() {
+			alert("ajax失败！");
+		}
+	});
+}
+
+function jsonToHtml(datas){
+	datas.forEach(function(val,index,arr){
+		var str = "<tr><th>"+(arr.length - index)+"</th><th>"+val.activity_time+"</th><th>"+val.description+"</th><th>"+val.number+"</th><th>"+val.address+"</th><th>"+val.release_time+"</th></tr>";
+		$("#volunteerActivityList").after(str);         
+	});
+}

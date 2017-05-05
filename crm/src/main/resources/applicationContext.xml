@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        				http://www.springframework.org/schema/beans/spring-beans.xsd
+        				http://www.springframework.org/schema/aop
+        				http://www.springframework.org/schema/aop/spring-aop.xsd
+        				http://www.springframework.org/schema/tx
+        				http://www.springframework.org/schema/tx/spring-tx.xsd
+        				http://www.springframework.org/schema/context
+        				http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- 配置开启组件扫描
+    	到基础包下扫描所有的类，看类上面是不是加了注解(@Repository、@Service)，如果加了注解，
+    	Spring就会创建Bean的实例，再交由Spring容器管理
+     -->
+    <context:component-scan base-package="cn.itcast.crm"/>
+    
+    <!-- 配置加载属性文件产生占位符 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    
+   	<!--  配置数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"
+		p:driverClass="${c3p0.driverClass}"
+		p:jdbcUrl="${c3p0.jdbcUrl}"
+		p:user="${c3p0.user}"
+		p:password="${c3p0.password}"
+		p:minPoolSize="${c3p0.minPoolSize}"
+		p:maxPoolSize="${c3p0.maxPoolSize}"
+		p:initialPoolSize="${c3p0.initialPoolSize}"/>
+	
+	<!-- 配置Spring的jdbcTemplate -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+    	p:dataSource-ref="dataSource"/>
+    
+    <!-- 配置数据源事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+    	p:dataSource-ref="dataSource"/>
+    
+    <!-- 开启annotaion注解事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>

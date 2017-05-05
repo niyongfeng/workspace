@@ -1,0 +1,15 @@
+package com.qingke.tianqi;
+
+import java.util.Scanner;
+
+public class TestWeather {
+	public static void main(String[] args) {
+		
+		weather w = new weather();
+
+		Scanner sc = new Scanner(system.in);
+		
+		while()
+		
+	}
+}

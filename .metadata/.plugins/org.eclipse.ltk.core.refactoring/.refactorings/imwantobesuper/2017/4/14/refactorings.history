@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MyConsole.java&apos; to &apos;d04.04/src/com.pengrui.util&apos;&#x0A;- Original project: &apos;imwantobesuper&apos;&#x0A;- Destination element: &apos;d04.04/src/com.pengrui.util&apos;&#x0A;- Original element: &apos;com.qk.util.MyConsole.java&apos;" description="Copy compilation unit" destination="=d04.04/src&lt;com.pengrui.util" element1="/src&lt;com.qk.util{MyConsole.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1491378150624" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qyt.dao.UserDao">
+	<resultMap type="com.qyt.pojo.User" id="UserMap">
+		<id property="id" column="id" jdbcType="INTEGER"/>
+		<result property="login_name" column="login_name" jdbcType="VARCHAR"/>
+		<result property="name" column="name" jdbcType="VARCHAR"/>
+		<result property="password" column="password" jdbcType="VARCHAR"/>
+	</resultMap>
+	<select id="selectById" parameterType="int" resultMap="UserMap">
+		select * from user where id = #{id}
+	</select>
+	<select id="selectByName" parameterType="com.qyt.pojo.User" resultMap="UserMap">
+		select * from user where name = #{name} 
+	</select>
+	<select id="selectByLoginName" parameterType="com.qyt.pojo.User" resultMap="UserMap">
+		select * from user where login_name = #{login_name}
+	</select>
+	<select id="selectIsLogin" parameterType="com.qyt.pojo.User" resultMap="UserMap">
+		select * from user where login_name = #{login_name} and password = Md5(#{password})
+	</select>
+	<insert id="insert" parameterType="com.qyt.pojo.User" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into user 
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != 0">
+				id,
+			</if>
+			<if test="login_name != null">
+				login_name,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="password != null">
+				password,
+			</if>
+		</trim>
+		<trim prefix="values(" suffix=")" suffixOverrides=",">
+			<if test="id != 0">
+				#{id},
+			</if>
+			<if test="login_name != null">
+				#{login_name},
+			</if>
+			<if test="name != null">
+				#{name},
+			</if>
+			<if test="password != null">
+				Md5(#{password}),
+			</if>
+		</trim>
+	</insert>
+	<update id="updateName" parameterType="com.qyt.pojo.User"> 
+		update user
+		<set>
+		<if test="name != null">
+		name = #{name}
+		</if>
+		where id = #{id}
+		</set>
+	</update>
+	<update id="updatePassword" parameterType="com.qyt.pojo.User"> 
+		update user
+		<set>
+		<if test="password != null">
+		password = #{password}
+		</if>
+		where id = #{id}
+		</set>
+	</update>
+	<delete id="delete" parameterType="com.qyt.pojo.User">
+		delete from user
+		<where>
+			<if test="id != null">
+				id = #{id}
+			</if>
+			<if test="login_name != null">
+				and login_name = #{login_name}
+			</if>
+			<if test="name != null">
+				and name = #{name}
+			</if>
+		</where>
+	</delete>
+	
+</mapper>

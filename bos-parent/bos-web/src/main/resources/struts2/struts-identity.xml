@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="identity" namespace="/identity" extends="bos">
+		
+		<!-- ###################### 职位管理 #################### -->
+		<!-- 跳转到分页查询职位的页面 -->
+		<action name="showSelectJob" class="cn.itcast.bos.action.identity.JobAction" method="showSelectJob">
+			<result>/WEB-INF/jsp/identity/job.jsp</result>
+		</action>
+		
+		<!-- 分页查询职位 -->
+		<action name="selectJob" class="cn.itcast.bos.action.identity.JobAction" method="selectJob">
+			<result type="json">
+				<!-- 指定由Action中哪个方法返回响应数据getResponseData -->
+				<param name="root">responseData</param>
+				<!-- 指定响应数据用GZIP进行压缩(提高服务器响应速度) -->
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		
+		<!-- 跳转到添加职位的页面 -->
+		<action name="showAddJob" class="cn.itcast.bos.action.identity.JobAction" method="showAddJob">
+			<result>/WEB-INF/jsp/identity/addJob.jsp</result>
+		</action>
+		<!-- 添加职位 -->
+		<action name="addJob" class="cn.itcast.bos.action.identity.JobAction" method="addJob">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 跳转到修改职位的页面 -->
+		<action name="showUpdateJob" class="cn.itcast.bos.action.identity.JobAction" method="showUpdateJob">
+			<result>/WEB-INF/jsp/identity/updateJob.jsp</result>
+		</action>
+		<!-- 修改职位 -->
+		<action name="updateJob" class="cn.itcast.bos.action.identity.JobAction" method="updateJob">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 批量删除职位 -->
+		<action name="deleteJob" class="cn.itcast.bos.action.identity.JobAction" method="deleteJob">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- ###################### 部门管理 #################### -->
+		<!-- 跳转到分页查询部门的页面 -->
+		<action name="showSelectDept" class="cn.itcast.bos.action.identity.DeptAction" method="showSelectDept">
+			<result>/WEB-INF/jsp/identity/dept.jsp</result>
+		</action>
+		
+		<!-- 分页查询部门 -->
+		<action name="selectDept" class="cn.itcast.bos.action.identity.DeptAction" method="selectDept">
+			<result type="json">
+				<!-- 指定由Action中哪个方法返回响应数据getResponseData -->
+				<param name="root">responseData</param>
+				<!-- 指定响应数据用GZIP进行压缩(提高服务器响应速度) -->
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		
+		<!-- 跳转到添加部门的页面 -->
+		<action name="showAddDept" class="cn.itcast.bos.action.identity.DeptAction" method="showAddDept">
+			<result>/WEB-INF/jsp/identity/addDept.jsp</result>
+		</action>
+		<!-- 添加部门 -->
+		<action name="addDept" class="cn.itcast.bos.action.identity.DeptAction" method="addDept">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 跳转到修改部门的页面 -->
+		<action name="showUpdateDept" class="cn.itcast.bos.action.identity.DeptAction" method="showUpdateDept">
+			<result>/WEB-INF/jsp/identity/updateDept.jsp</result>
+		</action>
+		<!-- 修改部门 -->
+		<action name="updateDept" class="cn.itcast.bos.action.identity.DeptAction" method="updateDept">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 批量删除部门 -->
+		<action name="deleteDept" class="cn.itcast.bos.action.identity.DeptAction" method="deleteDept">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		
+		<!-- ###################### 角色管理 #################### -->
+		<!-- 跳转到分页查询角色的页面  -->
+		<action name="showSelectRole" class="cn.itcast.bos.action.identity.RoleAction" method="showSelectRole">
+			<result>/WEB-INF/jsp/identity/role.jsp</result>
+		</action>
+		<!-- 分页查询角色 -->
+		<action name="selectRole" class="cn.itcast.bos.action.identity.RoleAction" method="selectRole">
+			<result type="json">
+				<!-- 指定由Action中哪个方法返回响应数据getResponseData -->
+				<param name="root">responseData</param>
+				<!-- 指定响应数据用GZIP进行压缩(提高服务器响应速度) -->
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 跳转到添加角色的页面 -->
+		<action name="showAddRole" class="cn.itcast.bos.action.identity.RoleAction" method="showAddRole">
+			<result>/WEB-INF/jsp/identity/addRole.jsp</result>
+		</action>
+		
+		<!-- 添加角色 -->
+		<action name="addRole" class="cn.itcast.bos.action.identity.RoleAction" method="addRole">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 跳转到修改角色的页面 -->
+		<action name="showUpdateRole" class="cn.itcast.bos.action.identity.RoleAction" method="showUpdateRole">
+			<result>/WEB-INF/jsp/identity/updateRole.jsp</result>
+		</action>
+		
+		<!-- 修改角色 -->
+		<action name="updateRole" class="cn.itcast.bos.action.identity.RoleAction" method="updateRole">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 批量删除角色 -->
+		<action name="deleteRole" class="cn.itcast.bos.action.identity.RoleAction" method="deleteRole">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		
+		
+		<!-- ###################### 用户管理 #################### -->
+		<!-- 跳转到多条件分页查询用户页面 -->
+		<action name="showSelectUser" class="cn.itcast.bos.action.identity.UserAction" method="showSelectUser">
+			<result>/WEB-INF/jsp/identity/user.jsp</result>
+		</action>
+		<!-- 多条件分页查询用户 -->
+		<action name="selectUser" class="cn.itcast.bos.action.identity.UserAction" method="selectUser">
+			<result type="json">
+				<param name="root">responseData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 异步加载部门 -->
+		<action name="loadDept" class="cn.itcast.bos.action.identity.DeptAction" method="loadDept">
+			<result type="json">
+				<param name="root">deptData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 跳转到添加用户页面 -->
+		<action name="showAddUser" class="cn.itcast.bos.action.identity.UserAction" method="showAddUser"> 
+			<result>/WEB-INF/jsp/identity/addUser.jsp</result>
+		</action>
+		<!-- 异步加载部门与职位数据 -->
+		<action name="loadDeptJob" class="cn.itcast.bos.action.identity.UserAction" method="loadDeptJob">
+			<result type="json">
+				<param name="root">deptJobData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 异步验证登录名是否重复 -->
+		<action name="validUserId" class="cn.itcast.bos.action.identity.UserAction" method="validUserId">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 添加用户 -->
+		<action name="addUser" class="cn.itcast.bos.action.identity.UserAction" method="addUser">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 跳转到修改用户的页面 -->
+		<action name="showUpdateUser" class="cn.itcast.bos.action.identity.UserAction" method="showUpdateUser">
+			<result>/WEB-INF/jsp/identity/updateUser.jsp</result>
+		</action>
+		<!-- 修改用户 -->
+		<action name="updateUser" class="cn.itcast.bos.action.identity.UserAction" method="updateUser">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 批量删除用户 -->
+		<action name="deleteUser" class="cn.itcast.bos.action.identity.UserAction" method="deleteUser">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 批量审核用户 -->
+		<action name="checkUser" class="cn.itcast.bos.action.identity.UserAction" method="checkUser">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		
+		<!-- ###################### 资源管理 #################### -->
+		<!-- 跳转到资源管理的主界面 -->
+		<action name="showSelectResource" class="cn.itcast.bos.action.identity.ResourceAction" method="showSelectResource">
+			<result>/WEB-INF/jsp/identity/resource.jsp</result>
+		</action>
+		<!-- 异步加载资源树 -->
+		<action name="loadResourceTree" class="cn.itcast.bos.action.identity.ResourceAction" method="loadResourceTree">
+			<result type="json">
+				<param name="root">resourceTreeData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 分页查询资源 -->
+		<action name="selectResource" class="cn.itcast.bos.action.identity.ResourceAction" method="selectResource">
+			<result type="json">
+				<param name="root">responseData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 跳转到添加资源页面 -->
+		<action name="showAddResource" class="cn.itcast.bos.action.identity.ResourceAction" method="showAddResource">
+			<result>/WEB-INF/jsp/identity/addResource.jsp</result>
+		</action>
+		<!-- 添加资源 -->
+		<action name="addResource" class="cn.itcast.bos.action.identity.ResourceAction" method="addResource">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 跳转到修改资源的页面 -->
+		<action name="showUpdateResource" class="cn.itcast.bos.action.identity.ResourceAction" method="showUpdateResource">
+			<result>/WEB-INF/jsp/identity/updateResource.jsp</result>
+		</action>
+		<!-- 修改资源 -->
+		<action name="updateResource" class="cn.itcast.bos.action.identity.ResourceAction" method="updateResource">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 批量删除资源 -->
+		<action name="deleteResource" class="cn.itcast.bos.action.identity.ResourceAction" method="deleteResource">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		
+		<!-- 跳转到用户绑定角色的页面 -->
+		<action name="showBindRole" class="cn.itcast.bos.action.identity.UserAction" method="showBindRole">
+			<result>/WEB-INF/jsp/identity/bindRole.jsp</result>
+		</action>
+		<!-- 查询所有的角色 -->
+		<action name="selectAllRole" class="cn.itcast.bos.action.identity.RoleAction" method="selectAllRole">
+			<result type="json">
+				<param name="root">responseData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 用户绑定角色 -->
+		<action name="bindRole" class="cn.itcast.bos.action.identity.UserAction" method="bindRole">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+		<!-- 跳转到角色绑定资源的页面 -->
+		<action name="showBindResource" class="cn.itcast.bos.action.identity.RoleAction" method="showBindResource">
+			<result>/WEB-INF/jsp/identity/bindResource.jsp</result>
+		</action>
+		
+		<!-- 查询所有的资源 -->
+		<action name="selectAllResource" class="cn.itcast.bos.action.identity.ResourceAction" method="selectAllResource">
+			<result type="json">
+				<param name="root">responseData</param>
+				<param name="enableGZIP">true</param>
+			</result>
+		</action>
+		<!-- 角色绑定资源 -->
+		<action name="bindResource" class="cn.itcast.bos.action.identity.RoleAction" method="bindResource">
+			<result type="json">
+				<param name="root">tipStatus</param>
+			</result>
+		</action>
+    </package> 
+    
+</struts>

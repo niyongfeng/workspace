@@ -1,0 +1,5 @@
+{"rows" : [
+	{"id" :1 , "name" : "手机", "remark" : "手机"},
+	{"id" : 2, "name" : "苹果", "remark" : "苹果手机", "_parentId" : 1, "state" : "closed", "checked" : true},
+	{"id" : 3, "name" : "iphone7", "remark" : "iphone7 128G", "_parentId" : 2}
+]}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+    <package name="basic" namespace="/basic" extends="bos">
+    	
+    	<!-- 跳转到区域分页查询的页面 -->
+		<action name="showSelectRegion" class="cn.itcast.bos.action.basic.RegionAction" method="showSelectRegion">
+			<result>/WEB-INF/jsp/basic/region.jsp</result>
+		</action>
+		<!-- 分页查询区域 -->
+		<action name="selectRegion" class="cn.itcast.bos.action.basic.RegionAction"
+				method="selectRegion"/>
+		
+		<!-- Excel导入 -->
+		<action name="importRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="importRegion"/>
+		
+		<!-- 跳转到添加区域的页面 -->
+		<action name="showAddRegion" class="cn.itcast.bos.action.basic.RegionAction" method="showAddRegion">
+			<result>/WEB-INF/jsp/basic/addRegion.jsp</result>
+		</action>
+		<!-- 添加区域 -->
+		<action name="addRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="addRegion"/>
+			
+		<!-- 跳转到修改区域的页面 -->
+		<action name="showUpdateRegion" class="cn.itcast.bos.action.basic.RegionAction" method="showUpdateRegion">
+			<result>/WEB-INF/jsp/basic/updateRegion.jsp</result>
+		</action>
+		
+		<!-- 修改区域 -->
+		<action name="updateRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="updateRegion"/>
+		
+		<!-- 批量删除区域 -->
+		<action name="deleteRegion" class="cn.itcast.bos.action.basic.RegionAction" 
+				method="deleteRegion"/>
+			
+		
+    </package>
+    
+</struts>

@@ -1,0 +1,251 @@
+package cn.itcast.bos.service.identity;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import cn.itcast.bos.entity.identity.Dept;
+import cn.itcast.bos.entity.identity.Job;
+import cn.itcast.bos.entity.identity.Resource;
+import cn.itcast.bos.entity.identity.Role;
+import cn.itcast.bos.entity.identity.User;
+import cn.itcast.bos.pojo.PageModel;
+
+/**
+ * 系统管理模块业务处理接口
+ * @author LEE.SIU.WAH
+ * @email lixiaohua7@163.com
+ * @date 2017年1月5日 下午3:26:34
+ * @version 1.0
+ */
+public interface IdentityService {
+	/** 定义生成code位数的常量 */
+	int CODE_LEN = 4;
+	/**
+	 * 登录方法
+	 * @param userId 账号
+	 * @param password 密码
+	 * @param vcode 验证码
+	 * @param key 是否记住用户 0不记住 1:记住
+	 * @return Map集合
+	 */
+	Map<String, Object> login(String userId, String password, String vcode,
+			int key);
+	/**
+	 * 根据主键userId获取用户
+	 * @param userId 主键
+	 * @return 用户
+	 */
+	User getUser(String userId);
+	/**
+	 * 分页查询职位
+	 * @param pageModel 分页实体
+	 * @return 职位集合
+	 */
+	List<Job> getJobByPage(PageModel pageModel);
+	/**
+	 * 添加职位
+	 * @param job 职位
+	 */
+	void saveJob(Job job);
+	/**
+	 * 根据主键id获取职位
+	 * @param id
+	 * @return 职位
+	 */
+	Job getJob(Integer id);
+	/**
+	 * 修改职位
+	 * @param job 职位
+	 */
+	void updateJob(Job job);
+	/**
+	 * 批量删除职位
+	 * @param ids
+	 */
+	void deleteJob(String[] ids);
+	/**
+	 * 加载职位
+	 * @return List
+	 */
+	List<Map<String, Object>> loadJob();
+	/**
+	 * 分页查询部门
+	 * @param pageModel 分页实体
+	 * @return 部门集合
+	 */
+	List<Dept> getDeptByPage(PageModel pageModel);
+	/**
+	 * 添加部门
+	 * @param dept 部门
+	 */
+	void saveDept(Dept dept);
+	/**
+	 * 根据主键id查询部门
+	 * @param id 主键
+	 * @return 部门
+	 */
+	Dept getDept(Integer id);
+	/**
+	 * 修改部门
+	 * @param dept 部门
+	 */
+	void updateDept(Dept dept);
+	/**
+	 * 批量删除部门
+	 * @param ids
+	 */
+	void deleteDept(String[] ids);
+	/**
+	 * 加载部门
+	 * @return List
+	 */
+	List<Map<String, Object>> loadDept();
+	/**
+	 * 分页查询角色
+	 * @param pageModel 分页实体
+	 * @return List
+	 */
+	List<Map<String, Object>> getRoleByPage(PageModel pageModel);
+	/**
+	 * 添加角色
+	 * @param role
+	 */
+	void saveRole(Role role);
+	/**
+	 * 根据主键id获取角色
+	 * @param id 角色id
+	 * @return 角色
+	 */
+	Role getRole(Integer id);
+	/**
+	 * 修改角色
+	 * @param role
+	 */
+	void updateRole(Role role);
+	/**
+	 * 批量删除角色
+	 * @param ids
+	 */
+	void deleteRole(String[] ids);
+	/**
+	 * 多条件分页查询用户
+	 * @param pageModel 分页实体
+	 * @param user 用户实体
+	 * @return 集合
+	 */
+	List<Map<String, Object>> getUserByPage(PageModel pageModel, User user);
+	/**
+	 * 查询部门与职位
+	 * @return Map集合
+	 */
+	Map<String, List<Map<String, Object>>> getDeptJob();
+	/**
+	 * 验证登录名
+	 * @param userId 用户id
+	 * @return 状态码 0: 重复   1:不重复
+	 */
+	int validUserId(String userId);
+	/**
+	 * 添加用户
+	 * @param user 用户实体
+	 */
+	void saveUser(User user);
+	/**
+	 * 获取修改的用户
+	 * @param userId 用户id
+	 * @return 用户
+	 */
+	User getUpdateUser(String userId);
+	/**
+	 * 修改用户
+	 * @param user 用户
+	 */
+	void updateUser(User user);
+	/**
+	 * 批量删除用户
+	 * @param userIds
+	 */
+	void deleteUser(String[] userIds);
+	/**
+	 * 批量审核用户
+	 * @param userIds
+	 * @param status
+	 */
+	void checkUser(String[] userIds, Short status);
+	/**
+	 * 获取资源树的数据 
+	 * @return List
+	 */
+	List<Map<String, Object>> getResourceTree();
+	/**
+	 * 分页查询资源
+	 * @param parentCode 父级code
+	 * @param pageModel 分页实体
+	 * @return List
+	 */
+	List<Map<String, Object>> getResourceByPage(String parentCode,
+			PageModel pageModel);
+	/**
+	 * 添加资源
+	 * @param resource 资源
+	 */
+	void saveResource(Resource resource);
+	/**
+	 * 根据主键code查询资源对象
+	 * @param code 主键
+	 * @return 资源
+	 */
+	Resource getResource(String code);
+	/**
+	 * 修改资源
+	 * @param resource 资源
+	 */
+	void updateResource(Resource resource);
+	/**
+	 * 批量删除资源
+	 * @param codes
+	 */
+	void deleteResource(String[] codes);
+	/**
+	 * 获取所有的角色
+	 * @return List
+	 */
+	List<Map<String, Object>> getAllRole(String userId);
+	/**
+	 * 用户绑定角色
+	 * @param userId 用户主键id
+	 * @param ids 多个角色
+	 */
+	void bindRole(String userId, String[] ids);
+	/**
+	 * 查询所有的资源
+	 * @return List
+	 */
+	List<Map<String, Object>> getAllResource(int roleId);
+	/**
+	 * 角色绑定资源
+	 * @param id
+	 * @param codes
+	 */
+	void bindResource(Integer id, String[] codes);
+	/**
+	 * 获取当前登录用户的菜单
+	 * @return List
+	 */
+	List<Map<String, Object>> getUserMenu();
+	/**
+	 * 根据userId查询该用户所有的角色字符串
+	 * @param userId
+	 * @return Set集合
+	 */
+	Set<String> getRoleByUserId(String userId);
+	/**
+	 * 根据userId查询该用户所有的权限字符串
+	 * @param userId
+	 * @return Set集合
+	 */
+	Set<String> getPermissionsByUserId(String userId);
+	
+
+}

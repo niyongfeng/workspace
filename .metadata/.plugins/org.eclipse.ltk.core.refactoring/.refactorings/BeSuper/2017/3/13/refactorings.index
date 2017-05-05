@@ -1,0 +1,31 @@
+1490785505521	Delete element
+1490785582648	Rename type 'Answer'
+1490785590350	Rename type 'Ask'
+1490785599156	Rename type 'Help'
+1490785606425	Rename type 'Login'
+1490786183182	Rename type 'LearnJDBC'
+1490843968626	Delete element
+1490852642004	Delete element
+1490864108482	Delete element
+1490864167255	Rename package 'com.pengrui.qingke'
+1490864210082	Rename package 'com.pengrui.functions'
+1490870612857	Rename type 'CommandFactory'
+1490870710546	Move compilation unit
+1490870727249	Move compilation unit
+1490870737101	Move compilation unit
+1490870774071	Move compilation unit
+1490870792422	Move compilation unit
+1490870801640	Move compilation unit
+1490870821955	Move compilation unit
+1490870826569	Move compilation unit
+1490870831359	Move compilation unit
+1490870869931	Rename type 'AbstractCommandFactory'
+1490871409099	Move compilation unit
+1490873253755	Rename type 'SystemCommand'
+1490873288059	Rename type 'SystemCommandFactory'
+1490873390882	Rename type 'CommandFactory'
+1490873978518	Rename type 'AbstractCommandFactory'
+1490874198715	Move compilation unit
+1490962910367	Copy compilation unit
+1490963253567	Copy compilation unit
+1490963560896	Copy file

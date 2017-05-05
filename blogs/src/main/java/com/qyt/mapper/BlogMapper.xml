@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qyt.dao.BlogDao">
+	<resultMap type="com.qyt.pojo.Blog" id="BlogMap">
+		<id property="id" column="id" jdbcType="INTEGER"/>
+		<result property="title" column="title" jdbcType="VARCHAR"/>
+		<result property="description" column="description" jdbcType="VARCHAR"/>
+		<result property="time" column="time" jdbcType="DATE"/>
+		<result property="type" column="type" jdbcType="VARCHAR"/>
+		<result property="page_view" column="page_view" jdbcType="INTEGER"/>
+		<result property="thumb" column="thumb" jdbcType="INTEGER"/>
+		<result property="user_id" column="user_id" jdbcType="INTEGER"/>
+		<association property="user" column="user_id" javaType="com.qyt.pojo.User"
+		select="com.qyt.dao.UserDao.selectById"/>
+	</resultMap>
+	<select id="selectById" parameterType="int" resultMap="BlogMap">
+		select * from blog where id = #{id}
+	</select>
+	<select id="selectByType" parameterType="string" resultMap="BlogMap">
+		select * from blog where type= #{type}
+	</select>
+	<select id="select" resultMap="BlogMap">
+		select * from blog 
+	</select>
+	<insert id="insert" parameterType="com.qyt.pojo.Blog" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into blog 
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != 0">
+				id,
+			</if>
+			<if test="title != null">
+				title,
+			</if>
+			<if test="description != null">
+				description,
+			</if>
+			<if test="time != null">
+				time,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="page_view != null">
+				page_view,
+			</if>
+			<if test="thumb != null">
+				thumb,
+			</if>
+			<if test="user_id != null">
+				user_id,
+			</if>
+		</trim>
+		<trim prefix="values(" suffix=")" suffixOverrides=",">
+			<if test="id != 0">
+				#{id},
+			</if>
+			<if test="title != null">
+				#{title},
+			</if>
+			<if test="description != null">
+				#{description},
+			</if>
+			<if test="time != null">
+				#{time},
+			</if>
+			<if test="type != null">
+				#{type},
+			</if>
+			<if test="page_view != null">
+				#{page_view},
+			</if>
+			<if test="thumb != null">
+				#{thumb},
+			</if>
+			<if test="user_id != null">
+				#{user_id},
+			</if>
+		</trim>
+	</insert>
+	<update id="update" parameterType="com.qyt.pojo.Blog">
+		update  blog
+		<trim prefix="set" suffixOverrides=",">
+		  <if test="title != null">
+		  	title = #{title},
+		  </if>
+		  <if test="description != null">
+		  	description = #{description},
+		  </if>
+		  <if test="time != null">
+		  	time = #{time},
+		  </if>
+		  <if test="type != null">
+		  	type = #{type},
+		  </if>
+		  <if test="page_view != 0">
+		  	page_view = #{page_view},
+		  </if>
+		  <if test="thumb != 0">
+		  	thumb = #{thumb},
+		  </if>
+		</trim>
+		where id = #{id}
+	</update>
+	<delete id="delete" parameterType="com.qyt.pojo.Blog">
+		delete from blog 
+		<where>
+			<if test="id != null">
+				id = #{id}
+			</if>
+		</where>
+	</delete>
+	
+</mapper>
