@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="graduation_project1" path="/graduation_project1" reloadable="true" source="org.eclipse.jst.jee.server:graduation_project1"/><Context docBase="nyfMaven" path="/nyfMaven" reloadable="true" source="org.eclipse.jst.j2ee.server:nyfMaven"/><Context docBase="resteasy-demo" path="/resteasy-demo" reloadable="true" source="org.eclipse.jst.j2ee.server:resteasy-demo"/><Context docBase="qingkeWeb" path="/qingkeWeb" reloadable="true" source="org.eclipse.jst.jee.server:qingkeWeb"/></Host>
+      <Context docBase="graduation_project1" path="/graduation_project1" reloadable="true" source="org.eclipse.jst.jee.server:graduation_project1"/><Context docBase="nyfMaven" path="/nyfMaven" reloadable="true" source="org.eclipse.jst.j2ee.server:nyfMaven"/><Context docBase="resteasy-demo" path="/resteasy-demo" reloadable="true" source="org.eclipse.jst.j2ee.server:resteasy-demo"/><Context docBase="learnServlet" path="/learnServlet" reloadable="true" source="org.eclipse.jst.jee.server:learnServlet"/><Context docBase="qingkeWeb" path="/qingkeWeb" reloadable="true" source="org.eclipse.jst.jee.server:qingkeWeb"/></Host>
     </Engine>
   </Service>
 </Server>

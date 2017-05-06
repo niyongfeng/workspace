@@ -1,0 +1,40 @@
+package com.nyf.controller;
+
+public class Snippet {
+	public static void main(String[] args) {
+		<context-param>
+		  	<param-name>user</param-name>
+		  	<param-value>zhaoheqiang</param-value>
+		  </context-param>
+		  <servlet>
+		  	<servlet-name>HomeServlet</servlet-name>
+		  	<servlet-class>com.zhq.controller.HomeServlet</servlet-class>
+		  	<init-param>
+		  		<param-name>action</param-name>
+		  		<param-value>homeServlet</param-value>
+		  	</init-param>
+		  	<init-param>
+		  		<param-name>charset</param-name>
+		  		<param-value>UTF8</param-value>
+		  	</init-param>
+		  </servlet>
+		  <servlet-mapping>
+		  	<servlet-name>HomeServlet</servlet-name>
+		  	<url-pattern>/home.html</url-pattern>
+		  </servlet-mapping>
+		  
+		  <servlet>
+		  	<servlet-name>main</servlet-name>
+		  	<servlet-class>com.zhq.controller.MainServlet</servlet-class>
+		  	<init-param>
+		  		<param-name>name</param-name>
+		  		<param-value>二狗子</param-value>
+		  	</init-param>
+		  </servlet>
+		  <servlet-mapping>
+		  	<servlet-name>main</servlet-name>
+		  	<url-pattern>/*</url-pattern>
+		  </servlet-mapping>
+	}
+}
+
