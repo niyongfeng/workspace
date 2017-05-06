@@ -49,5 +49,4 @@ public class HomeServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
-	
 }
