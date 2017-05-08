@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DictionaryDaoTest" project="qingkeCD" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.qingke.test.DictionaryDaoTest" time="0.274">
+    <testcase name="testSelectByWord" classname="com.qingke.test.DictionaryDaoTest" time="0.27"/>
+    <testcase name="testInsert" classname="com.qingke.test.DictionaryDaoTest" time="0.004"/>
+  </testsuite>
+</testrun>

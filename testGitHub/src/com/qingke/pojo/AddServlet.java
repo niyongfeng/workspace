@@ -41,8 +41,10 @@ public class AddServlet extends HttpServlet {
 			str = "输入的数字非法";
 		}
 		response.setHeader("content-type","text/html;charset=UTF-8");
-		response.getWriter().append(str + " : url中name的值为" + str3).println();
-		//response.getWriter().println(str + ":" + str3);
+		response.getWriter().append(str).println();
+		response.getWriter().println("<br/>url中name的值为" + str3);
+//		request.setAttribute( "ValueA ",str); 
+		//request.getRequestDispatcher("index.jsp").forward(request,response); 
 	}
 
 	/**

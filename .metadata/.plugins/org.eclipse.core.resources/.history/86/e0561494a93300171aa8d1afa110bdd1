@@ -1,0 +1,5 @@
+package com.qingke.dao;
+
+public interface DictionaryDao {
+
+}

@@ -1,0 +1,7 @@
+package com.qingke.service;
+
+public class SearchService {
+	public static String search(String word){
+		return "找不到";
+	}
+}

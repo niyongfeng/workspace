@@ -7,6 +7,7 @@
 <title>第一天的网站</title>
 </head>
 <body>
+
 <form action="AddServlet" method="get">
 <input name = "data1" type="text" placeholder = "请输入数字"></input>
 <label>+</label>

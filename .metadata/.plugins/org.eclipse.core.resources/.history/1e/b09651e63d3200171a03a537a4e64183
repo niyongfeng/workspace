@@ -1,0 +1,5 @@
+package com.qingke.servlet;
+
+public class SearchServlet {
+
+}

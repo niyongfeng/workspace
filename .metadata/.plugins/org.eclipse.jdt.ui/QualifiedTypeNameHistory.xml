@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.nyf.dao.ChairDao"/>
-<fullyQualifiedTypeName name="com.nyf.dao.TeacherProjectDao"/>
-<fullyQualifiedTypeName name="com.nyf.dao.CompetitionDao"/>
-<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
-<fullyQualifiedTypeName name="com.google.gson.Gson"/>
-<fullyQualifiedTypeName name="com.zhq.service.UserService"/>
-<fullyQualifiedTypeName name="com.zhq.pojo.User"/>
-<fullyQualifiedTypeName name="com.nyf.projo.Question"/>
-<fullyQualifiedTypeName name="com.nyf.dao.QuestionDao"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="com.nyf.control.VolunteerActivity"/>
-<fullyQualifiedTypeName name="com.nyf.projo.ApplicationForm"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.nyf.dao.ApplicationFormDao"/>
 <fullyQualifiedTypeName name="com.nyf.projo.VolunteerActivity"/>
 <fullyQualifiedTypeName name="com.nyf.dao.VolunteerActivityDao"/>
 <fullyQualifiedTypeName name="com.nyf.dao.LoginDao"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 <fullyQualifiedTypeName name="com.nyf.projo.User"/>
@@ -47,17 +34,30 @@
 <fullyQualifiedTypeName name="com.sun.net.ssl.HttpsURLConnection"/>
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="javax.xml.ws.Response"/>
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.qing.pojo.LocationNow"/>
 <fullyQualifiedTypeName name="okhttp3.OkHttpClient"/>
 <fullyQualifiedTypeName name="jdk.nashorn.internal.ir.RuntimeNode.Request"/>
 <fullyQualifiedTypeName name="okhttp3.Request"/>
 <fullyQualifiedTypeName name="okhttp3.Request.Builder"/>
 <fullyQualifiedTypeName name="okhttp3.Response"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.sun.javafx.collections.MappingChange.Map"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.disk.DiskFileItemFactory"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.servlet.ServletFileUpload"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.jni.File"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="com.qingke.service.SearchService"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>

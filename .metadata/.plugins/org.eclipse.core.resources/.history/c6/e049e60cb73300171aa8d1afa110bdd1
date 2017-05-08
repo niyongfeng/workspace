@@ -1,0 +1,17 @@
+package com.qingke.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class SearchService {
+
+	static Map<String,String> map = new HashMap<String,String>();
+	
+	public static String search(String word){
+		String str = map.get(word);
+		if(str == null) {
+			return "找不到！";
+		}
+		return str;
+	}
+}

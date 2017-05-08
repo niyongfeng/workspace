@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+html,body{padding:0; margin:0;}
+.d2{
+position:relative;
+width:800px;
+/*height:180px;*/
+text-align:center;
+line-height:40px;
+margin:0 auto;
+}
+</style>
+<title>轻课词典</title>
+</head>
+<body>
+<div class="d2">
+<h1>轻课词典</h1>
+<hr>
+<form action="SearchServlet" >
+<br/>
+<input name = "word" type="text" style="width:200px;height:30px;font-size:17px;" placeholder = "请输入单词"></input>
+<div>
+<br/>
+<button type="submit" style="width:100px;height:30px;font-size:17px;">搜索</button>
+</div>
+</form>
+</div>
+</body>
+</html>
