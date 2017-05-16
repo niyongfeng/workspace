@@ -1,0 +1,28 @@
+package com.nyf.service;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.nyf.dao.ProductDao;
+import com.nyf.pojo.Product;
+@Service
+public class ProductService {
+	
+	@Resource 
+	private ProductDao productDao;
+	
+	public List<Product> selectAll() {
+		System.out.println("productDao:" + productDao);
+		List<Product> list = productDao.selectProduct(new Product());
+		System.out.println(list);
+		return list;
+	}
+	
+	public static void main(String[] args) {
+		ProductService ps = new ProductService();
+		System.out.println(ps.selectAll());
+	}
+}

@@ -1,0 +1,28 @@
+package com.nyf.util;
+
+import java.io.IOException;
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+
+
+
+public class SqlSessionFactory {
+	private static SqlSessionFactory sqlSessionFactory;
+	private static Reader reader;
+	private static SqlSession session;
+	
+	static {
+		try {
+			reader = Resources.getResourceAsReader("mybatis_config1.xml");
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+			session = sqlSessionFactory.session
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

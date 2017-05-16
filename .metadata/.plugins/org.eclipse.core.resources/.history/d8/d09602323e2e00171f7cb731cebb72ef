@@ -1,8 +1,0 @@
-package com.qingke.tianqi;
-
-public class TestWeather {
-	public static void main(String[] args) {
-		weather w = new weather();
-		System.out.println(w.getWeather("绍兴"));
-	}
-}

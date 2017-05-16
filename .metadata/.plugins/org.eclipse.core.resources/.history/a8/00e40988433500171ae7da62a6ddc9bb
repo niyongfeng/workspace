@@ -1,0 +1,14 @@
+package com.nyf.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ProductServiceImpTest {
+
+	@Test
+	public void testSelectAll() {
+		fail("Not yet implemented");
+	}
+
+}

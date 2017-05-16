@@ -1,0 +1,17 @@
+package com.nyf.serviceImp;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.nyf.pojo.User;
+import com.nyf.service.UserService;
+@Service("userService")
+public class UserServiceImp implements UserService {
+
+	@Override
+	public List<User> login(User user) {
+		return null;
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.nyf.serviceImp;
+
+import java.util.List;
+
+import com.nyf.pojo.Tag;
+import com.nyf.service.TagService;
+
+public class TagServiceImp implements TagService {
+
+	@Override
+	public List<Tag> selectTagServiceById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Tag> selectTagServiceAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,33 @@
+package com.nyf.test;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+import com.nyf.pojo.Product;
+import com.nyf.service.ProductService;
+
+import junit.framework.TestCase;
+@RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration
+@ContextConfiguration(locations={"classpath:mybatis_config.xml"})
+public class ProductServiceImpTest extends TestCase {
+
+	@Resource
+	private ProductService productService;
+	
+	private Product product = new Product();
+	
+	public void testSelectAll() {
+		System.out.println("product:" + product);
+		System.out.println("productService:" + productService);
+		List<Product> list = productService.selectAll();
+		System.out.println(list);
+	}
+
+}

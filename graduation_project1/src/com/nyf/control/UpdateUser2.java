@@ -2,6 +2,7 @@ package com.nyf.control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.ibatis.session.SqlSession;
 
 import com.nyf.dao.LoginDao;
+import com.nyf.dao.UserDao;
 import com.nyf.projo.Login;
+import com.nyf.projo.User;
 import com.nyf.util.MybatisSessionFactory;
 
 /**
@@ -49,7 +52,21 @@ public class UpdateUser2 extends HttpServlet {
 		//l.setStatus(status);
 		if(cd.insert(l)){
 			session.commit();
-			out.print("<script>alert('添加成功！');window.location.href='manUserManage2.jsp';</script>");
+			List<Login> list = cd.selectByLogin(l);
+			if(code == 1) {
+				User user = new User();
+				user.setName(name);
+				user.setStudent_number(name);
+				System.out.println(list.get(0).getId());
+				user.setLogin_id(list.get(0).getId());
+				UserDao ud = session.getMapper(UserDao.class);
+				if(ud.insert(user)) {
+					session.commit();
+					out.print("<script>alert('添加成功！');window.location.href='manUserManage2.jsp';</script>");
+				}else {
+					out.print("<script>alert('添加失败！');window.location.href='manUserManage2.jsp';</script>");
+				}
+			}	
 		}else {
 			out.print("<script>alert('添加失败！');window.location.href='manUserManage2.jsp';</script>");
 		}

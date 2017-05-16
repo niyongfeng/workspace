@@ -137,7 +137,8 @@
       </Realm>
 
       <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
-
+            <context debug="0" docBase="/user/local/tomcat-9.0.0.M17/webapps/graduation_project1" path="" reloadable="true"/>
+            <context debug="0" docBase="/user/local/tomcat-9.0.0.M17/webapps/qingkeWeb" path="" reloadable="true"/>
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
         <!--
@@ -149,7 +150,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/></Host>
+      <Context docBase="/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/graduation_project1" path="/graduation_project1" reloadable="true" source="org.eclipse.jst.jee.server:graduation_project1"/><Context docBase="/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/shop" path="/shop" reloadable="true" source="org.eclipse.jst.jee.server:shop"/><Context docBase="/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/qingkeCD" path="/qingkeCD" reloadable="true" source="org.eclipse.jst.jee.server:qingkeCD"/><Context docBase="/Users/niyongfeng/Documents/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MallDemo7Order" path="/MallDemo7Order" reloadable="true" source="org.eclipse.jst.jee.server:MallDemo7Order"/></Host>
     </Engine>
   </Service>
 </Server>

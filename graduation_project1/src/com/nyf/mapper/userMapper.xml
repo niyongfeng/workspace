@@ -16,8 +16,8 @@
 	</resultMap>
 	<insert id="insert" parameterType="user">
 		insert into
-		user(student_number,name,gender,major,phone,email) value
-		(#{student_number},#{name},#{gender},#{major},#{phone},#{email})
+		user(student_number,name,login_id) value
+		(#{student_number},#{name},#{login_id})
 	</insert>
 	<delete id="delete" parameterType="int">
 		update user status = 0 where

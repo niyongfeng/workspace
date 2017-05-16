@@ -2,10 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.nyf"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="shop"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -57,6 +59,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/niyongfeng/Documents/workspace/mybatisLearn"/>
 			<item value="/Users/niyongfeng/Downloads/springMybatis/pom.xml"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -70,20 +73,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.qingke.blogs"/>
-			<item value="com.qingke.easyjava.resteasy_demo"/>
-			<item value="com.qingke.nyfMaven"/>
-			<item value="com.qingke.mavenlearn"/>
 		</list>
 		<list key="groupId">
-			<item value="com.qingke"/>
-			<item value="com.qingke.easyjava"/>
 		</list>
 		<list key="artifactId">
-			<item value="blogs"/>
-			<item value="resteasy-demo"/>
-			<item value="nyfMaven"/>
-			<item value="mavenlearn"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

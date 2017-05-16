@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mall.demo.mybatis.mapper.UserMapper">
+	<resultMap id="BaseResultMap" type="User">
+		<id column="id" property="userId" jdbcType="INTEGER" />
+		
+		<result column="login_name" property="loginName" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="nickname" property="nickname" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="photo_path" property="photoPath" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="queryByLoginNamePassword" parameterType="User"
+		resultMap="BaseResultMap">
+		select * from `user` where login_name = #{loginName}
+		  and password = #{password}	
+	</select>
+	
+	<select id="selectById" parameterType="int" resultMap="BaseResultMap">
+		select * from `user` where id = #{id}
+	</select>
+	
+	<select id="selectAll" resultMap="BaseResultMap">
+		select * from `user`
+	</select>
+
+	<insert id="addNewUser" parameterType="User" keyProperty="userId"
+		useGeneratedKeys="true">
+		insert into `user` (login_name, password,nickname, email,status, photo_path) values
+		(#{loginName}, #{password}, #{nickname}, #{email}, #{status}, #{photoPath})
+	</insert>
+
+	<update id="activeUserByName" parameterType="User">
+		update `user` set status = #{status}
+		where login_name = #{loginName}
+	</update>
+	
+	<update id="updatePhotoById" parameterType="User">
+		update `user` set photo_path = #{photoPath}
+		where id = #{userId}
+	</update>
+
+</mapper>

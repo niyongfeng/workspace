@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mall.demo.mybatis.mapper.NotificationMapper">
+	<resultMap id="BaseResultMap" type="Notification">
+		<id column="notification_id" property="notificationId" jdbcType="INTEGER" />
+		
+		<result column="ntype" property="nType" jdbcType="VARCHAR" />
+		<result column="token" property="token" jdbcType="VARCHAR" />
+		<result column="info" property="info" jdbcType="VARCHAR" />
+		<result column="expire_time" property="expireTime" jdbcType="DATE" />
+	</resultMap>
+	
+	<insert id="addNewNotification" parameterType="Notification"
+	keyProperty="notificationId" useGeneratedKeys="true">
+	insert into notification (ntype, token, info, expire_time)
+	values(#{nType}, #{token}, #{info}, #{expireTime})
+	</insert>
+	
+	<select id="selectByToken" parameterType="string" resultMap="BaseResultMap">
+	select * from notification where token = #{token}
+	</select>
+	
+	<update id="updateNotifyTime" parameterType="Notification">
+	update notification set expire_time = #{expireTime}
+	where notification_id = #{notificationId}
+	</update>
+</mapper>

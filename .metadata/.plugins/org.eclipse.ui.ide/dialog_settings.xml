@@ -14,17 +14,18 @@
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/niyongfeng/Desktop/MallDemo_7订单"/>
 			<item value=""/>
 			<item value="/Users/niyongfeng/Downloads/图书管理系统/图书馆管理系统/book"/>
 			<item value="/Users/niyongfeng/Downloads/XmlXpath/bin"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
 			<item value="/Users/niyongfeng/Desktop/qingkeWeb.zip"/>
 			<item value="/Users/niyongfeng/Desktop/blogs.zip"/>
 			<item value="/Users/niyongfeng/Downloads/mybatisLearn.zip"/>
-			<item value=""/>
 			<item value="/Users/niyongfeng/Downloads/code.zip"/>
 			<item value="/Users/niyongfeng/Downloads/imwantobesuper.zip"/>
 			<item value="/Users/niyongfeng/Downloads/XmlXpath.zip"/>

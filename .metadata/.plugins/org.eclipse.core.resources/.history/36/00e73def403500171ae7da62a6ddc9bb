@@ -1,0 +1,13 @@
+package com.nyf.dao;
+
+import java.util.List;
+
+import com.nyf.pojo.Product;
+
+public interface ProductDao {
+
+	int insertProduct(Product product);
+	List<Product> selectProduct(Product product);
+	int updateProduct(Product product);
+	
+}

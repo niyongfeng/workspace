@@ -1,0 +1,40 @@
+package com.nyf.serviceImp;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.nyf.dao.ProductDao;
+import com.nyf.pojo.Product;
+import com.nyf.service.ProductService;
+
+@Service("productService")
+public class ProductServiceImp implements ProductService{
+
+	@Resource
+	private ProductDao productDao;
+	//private ProductDao productDao = GetSqlSessionFactory.getSession().getMapper(ProductDao.class);
+
+	@Override
+	public List<Product> selectAll() {
+		//productDao = GetSqlSessionFactory.getSession().getMapper(ProductDao.class);
+		System.out.println("productDao:" +productDao);
+		return productDao.selectProduct(new Product());
+	}
+
+	@Override
+	public List<Product> selectByString(String str) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> selectByInt(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package com.nyf.test;
+
+import com.nyf.serviceImp.ProductServiceImp;
+
+import junit.framework.TestCase;
+
+public class ProductServiceImpTest extends TestCase {
+
+	public void testSelectAll() {
+		ProductServiceImp ps = new ProductServiceImp();
+		System.out.println(ps.selectAll());
+	}
+
+}

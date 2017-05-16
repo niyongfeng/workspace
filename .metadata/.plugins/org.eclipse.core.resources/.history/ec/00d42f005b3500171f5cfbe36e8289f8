@@ -1,0 +1,14 @@
+package com.nyf.util;
+
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+
+public class SqlSessionFactory {
+	private SqlSessionFactory sqlSessionFactory;
+	private Reader reader;
+	
+	static {
+		reader = Resources.getResourceAsStream("")
+	}
+}

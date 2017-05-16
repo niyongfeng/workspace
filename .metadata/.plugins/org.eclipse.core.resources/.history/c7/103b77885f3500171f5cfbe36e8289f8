@@ -1,0 +1,13 @@
+package com.nyf.util;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.nyf.service.ProductService;
+
+
+public class ServiceFactory {
+	private static ProductService productService;
+	ApplicationContext context = new ClassPathXmlApplicationContext("mybatis_config.xml");
+}

@@ -129,13 +129,13 @@
 			});
 			</script>
 			<div class="span9">
-				<h3 class="page-title">修改密码</h3>
+				<h3 class="page-title">个人中心</h3>
 				<form id="tab2" action="StudentUpdateUserServlet" method="get">
 				<div class="well">
 					<label>用户名</label>
 					<input name="name" type="text" value = ${userName} class="input-xlarge" readonly> 
 					<label>学号</label>
-					<input name="student_number" type="text" class="input-xlarge" readonly> 
+					<input name="student_number" type="text" class="input-xlarge" readonly>
 					<label>性别</label>
 					<input name="gender" type="text" class="input-xlarge"> 
 					<label>年龄</label>

@@ -1,0 +1,5 @@
+package com.nyf.service;
+
+public interface TagService {
+
+}

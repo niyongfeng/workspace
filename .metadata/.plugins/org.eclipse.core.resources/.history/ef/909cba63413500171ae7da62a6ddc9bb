@@ -1,0 +1,15 @@
+package com.nyf.test;
+
+import org.junit.Test;
+
+import com.nyf.service.ProductService;
+
+public class ProductServiceTest {
+
+	@Test
+	public void testSelectAll() {
+		ProductService ps = new ProductService();
+		System.out.println(ps.selectAll());
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.nyf.serviceImp;
+
+import java.util.List;
+
+import com.nyf.pojo.Product;
+import com.nyf.service.ProductService;
+
+public class ProductServiceImp implements ProductService {
+
+	@Override
+	public List<Product> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

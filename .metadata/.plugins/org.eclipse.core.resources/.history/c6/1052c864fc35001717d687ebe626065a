@@ -1,0 +1,13 @@
+package com.nyf.service;
+
+import java.util.List;
+
+import com.nyf.pojo.Product;
+
+public interface ProductService {
+	
+	List<Product> selectAll();
+	List<Product> selectByString(String str);
+	List<Product> selectByProduct(Product product);
+	List<Tag> selectTagAll();
+}

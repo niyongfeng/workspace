@@ -1,0 +1,12 @@
+package com.nyf.util;
+
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+import com.nyf.service.ProductService;
+
+@WebAppConfiguration
+@ContextConfiguration(locations={"classpath:mybatis_config.xml"})
+public class ServiceFactory {
+	private static ProductService productService;
+}

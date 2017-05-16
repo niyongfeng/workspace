@@ -134,8 +134,8 @@ function deleteChair(e) {
 							<li><a tabindex="-1" href="sign-in.html">注销</a></li>
 							<li class="divider"></li>
 							<li><a tabindex="-1" href="pwd.jsp">修改密码</a></li>
-							<li class="divider"></li>
-							<li><a tabindex="-1" href="studentInfo.jsp">个人中心</a></li>
+							<!-- <li class="divider"></li> -->
+							<!-- <li><a tabindex="-1" href="studentInfo.jsp">个人中心</a></li> -->
 						</ul>
 					</li>
 				</ul>
@@ -196,7 +196,6 @@ function deleteChair(e) {
 								<th>学号</th>
 								<th>专业</th>
 								<th>联系方式</th>
-								<th></th>
 								<th style="display: none;">volunteer_id</th>
 							</tr>
 						</thead>
@@ -204,7 +203,7 @@ function deleteChair(e) {
 					</div>
 					<div class="well search-well">
 					<form class="form-inline">
-						<button id = "export" class="btn" type="button">
+						<button id = "export" class="btn" type="submit" onclick="jj()">
 							<i class="icon-signout"></i>导出数据
 						</button>
 					</form>
@@ -212,7 +211,26 @@ function deleteChair(e) {
 			</div>
 		</div>
 	</div>
-	
+	<script type="text/javascript">
+	function jj() {
+		var reg = new RegExp('\\d+');
+		var id = reg.exec(window.location.search)[0];
+		console.log(id);
+		$.ajax({
+			type : "get",
+			url : 'ExportServlet',
+			data : $.param({
+				id : id
+			}),
+			cache : false,
+			success:
+				alert("导出成功！"),
+				
+				/* window.location.href="manVolunteerActivity.jsp"; */
+			
+		})
+	}
+	</script>
 	<script src="lib/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

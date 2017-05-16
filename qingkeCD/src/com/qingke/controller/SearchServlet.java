@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
 import com.qingke.pojo.Dictionary;
 import com.qingke.service.SearchService;
 
@@ -32,14 +33,25 @@ public class SearchServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		List<Dictionary> list = SearchService.search(request.getParameter("word"));
-		String result = "";
-		for(Dictionary d : list) {
-			result = result + d.getWord() + " : <br/>" + d.getDescription() + "<hr/>";
-		}
-		request.setAttribute("result",result); 
-		RequestDispatcher rd = request.getRequestDispatcher("/search.jsp");
-		rd.forward(request,response); 
+		//List<Dictionary> result=CiDianSeacher.seacher(request.getParameter("word"));
+		/*request.setAttribute("result",result);
+		request.getRequestDispatcher("result.jsp").forward(request, response);*/
+		Gson gson=new Gson();
+		String str=gson.toJson(list);
+		response.setCharacterEncoding("utf-8");
+		response.getWriter().print(str);
+		
+		
+		
+//		String result = "";
+//		for(Dictionary d : list) {
+//			result = result + d.getWord() + " : <br/>" + d.getDescription() + "<hr/>";
+//		}
+//		request.setAttribute("result",result); 
+//		RequestDispatcher rd = request.getRequestDispatcher("/search.jsp");
+//		rd.forward(request,response); 
 	}
 
 

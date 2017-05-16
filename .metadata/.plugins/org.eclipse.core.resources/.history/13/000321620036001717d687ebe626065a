@@ -1,0 +1,18 @@
+package com.nyf.util;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.nyf.serviceImp.ProductServiceImp;
+import com.nyf.serviceImp.TagServiceImp;
+
+
+public class ServiceFactory {
+	public static ProductServiceImp productServiceImp;
+	public static TagServiceImp tagServiceImp;
+	private static ApplicationContext context = new ClassPathXmlApplicationContext("mybatis_config.xml");
+	static {
+		productServiceImp = context.getBean("productServiceImp",ProductServiceImp.class);
+	}
+}
