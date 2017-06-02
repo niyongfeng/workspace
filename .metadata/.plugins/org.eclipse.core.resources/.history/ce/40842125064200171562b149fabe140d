@@ -1,0 +1,7 @@
+package com.nyf.api;
+
+import net.sf.json.JSONArray;
+
+public interface GroupMembersService {
+	public JSONArray getGroupMembers(Integer groupId, Integer userId);
+}

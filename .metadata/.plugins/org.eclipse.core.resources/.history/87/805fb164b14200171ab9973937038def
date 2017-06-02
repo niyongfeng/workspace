@@ -1,0 +1,14 @@
+package com.xiaohoo.api.service;
+
+
+import net.sf.json.JSONArray;
+
+public interface GroupMembersService {
+	/**
+	 * 显示群内成员列表
+	 * @param groupId
+	 * @param userId
+	 * @return
+	 */
+	public JSONArray getGroupMembers(Integer groupId, Integer userId);
+}

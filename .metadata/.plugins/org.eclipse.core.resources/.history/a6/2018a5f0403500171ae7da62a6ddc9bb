@@ -1,9 +1,0 @@
-package com.nyf.service;
-
-import java.util.List;
-
-import com.nyf.pojo.Product;
-
-public interface ProductService {
-	List<Product> selectAll();
-}

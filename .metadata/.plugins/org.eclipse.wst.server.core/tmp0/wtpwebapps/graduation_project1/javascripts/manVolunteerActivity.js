@@ -38,6 +38,7 @@ function select(){
 			$("input[name='address']").val(json.address);
 			$("input[name ='number']").val(json.number);
 			$("select[name='status']").val(json.status);
+			$("input[name ='credit']").val(json.credit);
 		}
 	});
 }

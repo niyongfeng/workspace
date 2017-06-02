@@ -1,5 +1,0 @@
-package com.nyf.dao;
-
-public interface ProductDao {
-
-}

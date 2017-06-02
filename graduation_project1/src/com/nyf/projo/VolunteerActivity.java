@@ -55,7 +55,9 @@ public class VolunteerActivity {
 		return description;
 	}
 	public void setDescription(String description) {
+		if(!("".equals(description))) {
 		this.description = description;
+		}
 	}
 	public Integer getNumber() {
 		return number;
@@ -67,7 +69,9 @@ public class VolunteerActivity {
 		return address;
 	}
 	public void setAddress(String address) {
+		if(!("".equals(address))) {
 		this.address = address;
+		}
 	}
 	public Date getRelease_time() {
 		return release_time;

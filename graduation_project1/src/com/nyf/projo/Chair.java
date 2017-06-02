@@ -32,7 +32,9 @@ public class Chair {
 		this.status = status;
 	}
 	public void setChair_professor(String chair_professor) {
-		this.chair_professor = chair_professor;
+		if(!("".equals(chair_professor))){
+			this.chair_professor = chair_professor;
+		}
 	}
 	public Integer getId() {
 		return id;
@@ -50,7 +52,9 @@ public class Chair {
 		return description;
 	}
 	public void setDescription(String description) {
-		this.description = description;
+		if(!("".equals(description))) {
+			this.description = description;
+		}
 	}
 	public String getChair_professor() {
 		return chair_professor;
@@ -59,7 +63,9 @@ public class Chair {
 		return address;
 	}
 	public void setAddress(String address) {
-		this.address = address;
+		if(!("".equals(address))) {
+			this.address = address;
+		}
 	}
 	public Date getRelease() {
 		return release_time;

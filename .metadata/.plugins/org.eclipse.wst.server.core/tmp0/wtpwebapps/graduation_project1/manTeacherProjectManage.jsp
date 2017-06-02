@@ -157,12 +157,12 @@
 						</div>
 						<div class="tab-pane fade" id="profile">
 							<form id="tab2" action="TeacherProjectManageServlet" method="get">
-								<label>项目名</label> <input name="name" type="text"
+								<label>项目名</label> <input name="name1" type="text"
 									class="input-xlarge"> <label>具体内容</label>
-								<textarea name="description" rows="3" class="input-xlarge"></textarea>
-								<label>指导老师</label> <input name="teacher" type="text"
+								<textarea name="description1" rows="3" class="input-xlarge"></textarea>
+								<label>指导老师</label> <input name="teacher1" type="text"
 									class="input-xlarge"> <label>人数</label> <input
-									name="number" type="text" class="input-xlarge">
+									name="number1" type="text" class="input-xlarge">
 								<div>
 									<button class="btn btn-primary" style="">发布</button>
 								</div>

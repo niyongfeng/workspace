@@ -42,7 +42,7 @@ public class ChariManageServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("utf-8");
-		String dateString = request.getParameter("activity_time");
+		String dateString = request.getParameter("activity_time1");
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date activity_time = new Date();
 		try {
@@ -50,9 +50,9 @@ public class ChariManageServlet extends HttpServlet {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		String chair_professor = request.getParameter("chair_professor");
-		String description = request.getParameter("description");
-		String address = request.getParameter("address");
+		String chair_professor = request.getParameter("chair_professor1");
+		String description = request.getParameter("description1");
+		String address = request.getParameter("address1");
 		Chair c = new Chair();
 		c.setActivity_time(activity_time);
 		c.setChair_professor(chair_professor);
@@ -75,12 +75,20 @@ public class ChariManageServlet extends HttpServlet {
 			}
 			
 		} else {
+			try{
 			cd.insert(c);
 			s.commit();
 			if(list.get(0).getCode() == 2) {
 				out.print("<script>alert('发布成功！');window.location.href='teacherChair.jsp';</script>");
 			}else {
 				out.print("<script>alert('发布成功！');window.location.href='manChair.jsp';</script>");
+			}
+			}catch(Exception e) {
+				if(list.get(0).getCode() == 2) {
+					out.print("<script>alert('发布失败！(不能为空)');window.location.href='teacherChair.jsp';</script>");
+				}else {
+					out.print("<script>alert('发布失败！(不能为空)');window.location.href='manChair.jsp';</script>");
+				}
 			}
 		}
 			

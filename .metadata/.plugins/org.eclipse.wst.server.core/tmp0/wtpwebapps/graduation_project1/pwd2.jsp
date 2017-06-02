@@ -79,14 +79,12 @@
 							<li><a tabindex="-1" href="sign-in.html">注销</a></li>
 							<li class="divider"></li>
 							<li><a tabindex="-1" href="pwd.jsp">修改密码</a></li>
-							<li class="divider"></li>
-							<li><a tabindex="-1" href="studentInfo.jsp">个人中心</a></li>
 						</ul>
 					</li>
 					
 				</ul>
-				<a class="brand" href="studentIndex.jsp"><span class="first">浙江传媒学院</span>
-					<span class="second">第二课堂管理系统</span>(学生)</a>
+				<a class="brand" href="teacherIndex.jsp"><span class="first">浙江传媒学院</span>
+					<span class="second">第二课堂管理系统</span>(教师)</a>
 			</div>
 		</div>
 	</div>

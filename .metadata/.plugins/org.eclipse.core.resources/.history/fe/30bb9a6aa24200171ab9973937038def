@@ -1,0 +1,29 @@
+package com.nyf.api;
+
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+import com.xiaohoo.api.service.impl.GroupMembersServiceImp;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration
+@ContextConfiguration(locations={"classpath:config/spring/biz/datasource.xml"})
+public class GroupMembersServiceImpTest {
+
+	@Resource
+	private GroupMembersServiceImp groupMembersServiceImp;
+
+	@Test
+	public void test() {
+		System.out.println("groupMembersServiceImp:" + groupMembersServiceImp);
+		Integer a = new Integer(1);
+		Integer b = new Integer(3);
+		System.out.println(groupMembersServiceImp.getGroupMembers(a, b).toString());
+	}
+
+}

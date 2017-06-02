@@ -44,9 +44,10 @@ public class VolunteerActivityManageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setCharacterEncoding("utf-8");
-		String dateString = request.getParameter("activity_time");
+		String dateString = request.getParameter("activity_time1");
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		PrintWriter out = response.getWriter();
+		double credit = Double.valueOf(request.getParameter("credit1"));
 		String userName = request.getSession().getAttribute("userName").toString();
 		LoginDao loginDao = MybatisSessionFactory.getSession().getMapper(LoginDao.class);
 		List<Login> list = loginDao.selectByName(userName);
@@ -57,17 +58,18 @@ public class VolunteerActivityManageServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String description = request.getParameter("description");
-		String address = request.getParameter("address");
+		String description = request.getParameter("description1");
+		String address = request.getParameter("address1");
 		int number;
 		try {
-			number = Integer.valueOf(request.getParameter("number"));
+			number = Integer.valueOf(request.getParameter("number1"));
 			VolunteerActivity c = new VolunteerActivity();
 			c.setNumber(number);
 			c.setActivity_time(activity_time);
 			c.setDescription(description);
 			c.setAddress(address);
 			c.setLogin_id(list.get(0).getId());
+			c.setCredit(credit);
 			SqlSession s = MybatisSessionFactory.getSession();
 			VolunteerActivityDao cd = s.getMapper(VolunteerActivityDao.class);
 			if (!MybatisSessionFactory.isValidDate(dateString)) {
@@ -80,14 +82,24 @@ public class VolunteerActivityManageServlet extends HttpServlet {
 				}
 
 			} else {
+				try {
 				cd.insert(c);
+				
 				s.commit();
 				if (list.get(0).getCode() == 2) {
 					out.print("<script>alert('发布成功！');window.location.href='teacherVolunteerActivity.jsp';</script>");
 				} else {
 					out.print("<script>alert('发布成功！');window.location.href='manVolunteerActivity.jsp';</script>");
 				}
-			}
+			}catch(Exception e) {
+				if (list.get(0).getCode() == 2) {
+					out.print(
+							"<script>alert('发布失败！(不能为空)');window.location.href='teacherVolunteerActivity.jsp';</script>");
+				} else {
+					out.print(
+							"<script>alert('发布失败！(不能为空)');window.location.href='manVolunteerActivity.jsp';</script>");
+				}
+			}}
 		} catch (NumberFormatException e) {
 			if (list.get(0).getCode() == 2) {
 				out.print(

@@ -54,7 +54,7 @@ public class StudentAddHelp extends HttpServlet {
 		q.setLogin_id(login_id);
 		System.out.println(q);
 		boolean b = qd.insert(q);
-		if(b) {
+		if((!("".equals(question))) && b) {
 			s.commit();
 			out.print(
 					"<script>alert('提问成功！');window.location.href='studenthelp.jsp';</script>");

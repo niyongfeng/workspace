@@ -224,9 +224,8 @@ function deleteChair(e) {
 			}),
 			cache : false,
 			success:
-				alert("导出成功！"),
-				
-				/* window.location.href="manVolunteerActivity.jsp"; */
+				alert("导出成功！"),		
+				/*window.location.href="manVolunteerActivity.jsp"; */
 			
 		})
 	}

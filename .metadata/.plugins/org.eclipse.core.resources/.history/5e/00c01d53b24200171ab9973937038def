@@ -1,0 +1,55 @@
+package com.xiaohoo.api.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.xiaohoo.api.dao.GroupMembersMapper;
+import com.xiaohoo.api.dao.GroupMomentResponseMapper;
+import com.xiaohoo.api.dao.TipOffMapper;
+import com.xiaohoo.api.domain.GroupMomentResponse;
+import com.xiaohoo.api.domain.NewGroupMembers;
+import com.xiaohoo.api.domain.TipOff;
+import com.xiaohoo.api.service.GroupMembersService;
+
+import net.sf.json.JSONArray;
+
+//显示群内成员的功能实现类
+@Service
+public class GroupMembersServiceImp implements GroupMembersService{
+	
+	@Resource
+	GroupMembersMapper groupMembersMapper;
+	
+	@Override
+	public JSONArray getGroupMembers(Integer groupId, Integer userId) {
+		//System.out.println("groupMembersMapper:" + groupMembersMapper);
+		List<NewGroupMembers> groupMembers = groupMembersMapper.selectByGroupId(userId,groupId);
+		JSONArray json = JSONArray.fromObject(groupMembers); 
+		return json;
+	}
+
+	@Autowired
+	GroupMomentResponseMapper groupMomentResponseMapper;
+	
+	@Override
+	public List<GroupMomentResponse> getGroupMomentResponse(Integer groupMomentsId) {
+		List<GroupMomentResponse> list = groupMomentResponseMapper.selectByGroupMomentsId(groupMomentsId);
+		return list;
+	}
+
+	@Autowired
+	TipOffMapper tipOffMapper;
+
+	@Override
+	@Transactional
+	public boolean tipOff(TipOff tipOff) {
+		int b = tipOffMapper.insertSelective(tipOff);
+		return (b != 0);
+	}
+
+}

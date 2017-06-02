@@ -151,7 +151,7 @@
 									class="input-xlarge"> <label>权限</label>
 								<!--  <input type="text" value ="学生/教师/管理员" class="input-xlarge"> -->
 								<select id="code1" name="code">
-									<option value="0">请选择</option>
+									<!-- <option value="0">请选择</option> -->
 									<option value="1">学生用户</option>
 									<option value="2">教师用户</option>
 									<option value="3">管理员用户</option>
@@ -163,13 +163,13 @@
 						</div>
 						<div class="tab-pane fade" id="profile">
 							<form id="tab2" action="UpdateUser2" method="post">
-								<label>用户名</label> <input name = "username" type="text" class="input-xlarge">
+								<label>用户名</label> <input name = "username1" type="text" class="input-xlarge">
 								<!-- <input type="text" class="input-xlarge"> -->
-								<label>密码</label> <input name = "userpwd" type="text" class="input-xlarge">
+								<label>密码</label> <input name = "userpwd1" type="text" class="input-xlarge">
 								<label>权限</label>
 								<!-- <input type="text" class="input-xlarge"> -->
-								<select id="code1" name="code">
-									<option value="0">请选择</option>
+								<select id="code1" name="code1">
+									<!-- <option value="0">请选择</option> -->
 									<option value="1">学生用户</option>
 									<option value="2">教师用户</option>
 									<option value="3">管理员用户</option>

@@ -1,0 +1,14 @@
+package com.nyf.api.test;
+
+import com.xiaohoo.api.domain.GroupMomentScroe;
+
+public interface StatusMarkService {
+
+	/**
+     * 新增状态分数
+     * @param groupMomentScroe
+     * @return int
+     */
+	
+	public boolean statusMark(GroupMomentScroe groupMomentScroe);
+}

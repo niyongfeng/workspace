@@ -1,0 +1,11 @@
+package com.xiaohoo.api.service;
+
+import org.springframework.stereotype.Service;
+
+import net.sf.json.JSONArray;
+
+@Bean("groupMembersService")
+
+public interface GroupMembersService {
+	public JSONArray getGroupMembers(Integer groupId, Integer userId);
+}

@@ -41,13 +41,17 @@ public class TeacherProject {
 		return name;
 	}
 	public void setName(String name) {
+		if(!("".equals(name))) {
 		this.name = name;
+		}
 	}
 	public String getTeacher() {
 		return teacher;
 	}
 	public void setTeacher(String teacher) {
+		if(!("".equals(teacher))) {
 		this.teacher = teacher;
+		}
 	}
 	public Integer getNumber() {
 		return number;
@@ -59,7 +63,9 @@ public class TeacherProject {
 		return description;
 	}
 	public void setDescription(String description) {
+		if(!("".equals(description))) {
 		this.description = description;
+		}
 	}
 	@Override
 	public String toString() {

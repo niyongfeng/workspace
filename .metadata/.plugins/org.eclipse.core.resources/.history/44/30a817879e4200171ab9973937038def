@@ -1,0 +1,9 @@
+package com.xiaohoo.api.service;
+
+import org.springframework.context.annotation.Bean;
+
+import net.sf.json.JSONArray;
+
+public interface GroupMembersService {
+	public JSONArray getGroupMembers(Integer groupId, Integer userId);
+}

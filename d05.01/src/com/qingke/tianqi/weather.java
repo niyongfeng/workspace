@@ -72,9 +72,9 @@ public class weather {
 	public ResultsNext getResultNext(String city) {
 		Gson gson = new Gson();
 		String str = getWeather2(city);
-		//System.out.println(str);
+		System.out.println(str);
 		if (!("".equals(str))) {
-			//System.out.println(gson.fromJson(str, ResultsNext.class));
+			System.out.println(gson.fromJson(str, ResultsNext.class));
 			return gson.fromJson(str, ResultsNext.class);
 		} else {
 			return null;

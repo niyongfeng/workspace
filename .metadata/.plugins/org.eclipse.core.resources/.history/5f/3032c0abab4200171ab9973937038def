@@ -1,0 +1,8 @@
+package com.xiaohoo.api.service;
+
+
+import net.sf.json.JSONArray;
+
+public interface GroupMembersService {
+	public JSONArray getGroupMembers(Integer groupId, Integer userId);
+}

@@ -1,0 +1,32 @@
+package com.xiaohoo.api.domain;
+
+
+public class NewGroupMembers{
+
+	private String type;
+	
+	private String nickname;
+	
+	private String mark;
+	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public String getMark() {
+		return mark;
+	}
+	public void setMark(String mark) {
+		this.mark = mark;
+	}
+	
+	
+}

@@ -41,9 +41,9 @@ public class UpdateUser2 extends HttpServlet {
 		SqlSession session = MybatisSessionFactory.getSession();
 		LoginDao cd = session.getMapper(LoginDao.class);
 		//int status = Integer.valueOf(request.getParameter("status"));
-		String name = request.getParameter("username");
-		String pwd = request.getParameter("userpwd");
-		int code = Integer.valueOf(request.getParameter("code"));
+		String name = request.getParameter("username1");
+		String pwd = request.getParameter("userpwd1");
+		int code = Integer.valueOf(request.getParameter("code1"));
 		Login l = new Login();	
 		PrintWriter out = response.getWriter();
 		l.setName(name);

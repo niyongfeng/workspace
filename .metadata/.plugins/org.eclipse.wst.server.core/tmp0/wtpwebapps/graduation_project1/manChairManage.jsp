@@ -158,12 +158,12 @@
 						</div>
 						<div class="tab-pane fade" id="profile">
 							<form id="tab2" action="ChariManageServlet" method="get">
-								<label>活动时间</label> <input name="activity_time" type="text"
+								<label>活动时间</label> <input name="activity_time1" type="text"
 									class="input-xlarge" placeholder="yyyy-MM-dd HH:mm:ss">
-								<label>主讲人</label> <input name="chair_professor" type="text"
+								<label>主讲人</label> <input name="chair_professor1" type="text"
 									class="input-xlarge"> <label>具体内容</label>
-								<textarea name="description" rows="3" class="input-xlarge"></textarea>
-								<label>地点</label> <input name="address" type="text"
+								<textarea name="description1" rows="3" class="input-xlarge"></textarea>
+								<label>地点</label> <input name="address1" type="text"
 									class="input-xlarge">
 								<div>
 									<button class="btn btn-primary" type="submit">发布</button>

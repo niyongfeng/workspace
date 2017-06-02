@@ -16,8 +16,8 @@
 	</resultMap>
 	<insert id="insert" parameterType="VolunteerActivity">
 		insert into
-		volunteer_activity(activity_time,description,number,address,login_id) value
-		(#{activity_time},#{description},#{number},#{address},#{login_id})
+		volunteer_activity(activity_time,description,number,address,login_id,credit) value
+		(#{activity_time},#{description},#{number},#{address},#{login_id},#{credit})
 	</insert>
 	<delete id="delete" parameterType="int">
 		update volunteer_activity set

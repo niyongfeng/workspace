@@ -2,6 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:1.1" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:qingkeWeb" serverId="Tomcat v9.0 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:graduation_project1" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:graduation_project1"/>
   <module moduleId="org.eclipse.jst.jee.server:graduation_project2" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

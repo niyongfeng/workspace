@@ -42,7 +42,7 @@ public class CompetitionManageServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("utf-8");
-		String dateString = request.getParameter("activity_time");
+		String dateString = request.getParameter("activity_time1");
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date activity_time = new Date();
 		try {
@@ -50,8 +50,8 @@ public class CompetitionManageServlet extends HttpServlet {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		String description = request.getParameter("description");
-		String address = request.getParameter("address");
+		String description = request.getParameter("description1");
+		String address = request.getParameter("address1");
 		Competition c = new Competition();
 		c.setActivity_time(activity_time);
 		c.setDescription(description);
@@ -73,12 +73,20 @@ public class CompetitionManageServlet extends HttpServlet {
 			}
 			
 		} else {
+			try{
 			cd.insert(c);
 			s.commit();
 			if(list.get(0).getCode() == 2) {
 				out.print("<script>alert('发布成功！');window.location.href='teacherCompetition.jsp';</script>");
 			}else {
 				out.print("<script>alert('发布成功！');window.location.href='manCompetition.jsp';</script>");
+			}
+			}catch(Exception e) {
+				if(list.get(0).getCode() == 2) {
+					out.print("<script>alert('发布失败！(不能为空)');window.location.href='teacherCompetition.jsp';</script>");
+				}else {
+					out.print("<script>alert('发布失败！(不能为空)');window.location.href='manCompetition.jsp';</script>");
+				}
 			}
 		}
 		

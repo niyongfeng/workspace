@@ -1,0 +1,17 @@
+package com.xiaohoo.api.service.impl;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.xiaohoo.api.domain.Administrator;
+
+public class AdministratorServiceImplTest {
+
+	@Test
+	public void testList() {
+		AdministratorServiceImpl a = new AdministratorServiceImpl();
+		System.out.println(a.list(new Administrator()));
+	}
+
+}

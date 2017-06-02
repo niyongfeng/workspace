@@ -46,7 +46,7 @@ public class teacherUpdateVolunteerActivity extends HttpServlet {
 		String description = request.getParameter("description");
 		String address = request.getParameter("address");
 		int status = Integer.valueOf(request.getParameter("status"));
-		
+		double credit = Double.valueOf(request.getParameter("credit"));
 		int number = 0;
 		try{
 			number = Integer.valueOf(request.getParameter("number"));
@@ -67,6 +67,7 @@ public class teacherUpdateVolunteerActivity extends HttpServlet {
 			va.setId(id);
 			va.setRelease_time(new Date());
 			va.setStatus(status);
+			va.setCredit(credit);
 			if (!MybatisSessionFactory.isValidDate(dateString)) {
 				out.print("<script>alert('时间修改失败！');window.location.href='teacherVolunteerActivity.jsp';</script>");
 			} else {

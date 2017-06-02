@@ -10396,3 +10396,782 @@ org.eclipse.core.runtime.CoreException: Launch configuration UserTableFunctionTe
 2017-05-16 09:16:28,880 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2017-05-16 09:16:28,882 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-16 09:16:28,882 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-16 10:01:44,845 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:01:44,852 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:01:44,852 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:01:44,854 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:01:44,854 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:02:33,909 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:02:33,909 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:02:33,909 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:02:33,910 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:02:33,911 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:02:54,045 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:02:54,049 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:02:54,050 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:02:54,056 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:02:54,057 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:03:02,992 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:03:02,994 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:03:02,994 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:03:02,997 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:03:02,997 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:03:08,072 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:03:08,074 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:03:08,074 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:03:08,078 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:03:08,079 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:06:09,982 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:06:09,984 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:06:09,985 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:06:09,987 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:06:09,987 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:14:18,607 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:14:18,609 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:14:18,610 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:14:18,612 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:14:18,613 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:14:59,545 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:14:59,546 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:14:59,547 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:14:59,548 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:14:59,548 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:33:05,198 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:33:05,200 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:33:05,200 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:33:05,201 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:33:05,202 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:34:18,273 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:34:18,281 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:34:18,282 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:34:18,291 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:34:18,292 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:35:24,393 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:35:24,395 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:35:24,396 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:35:24,398 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:35:24,399 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:36:42,528 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:36:42,529 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:36:42,530 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:36:42,531 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:36:42,531 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:37:03,554 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:37:03,555 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:37:03,556 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:37:03,557 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:37:03,557 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:38:27,558 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:38:27,559 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:38:27,560 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:38:27,561 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:38:27,561 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:39:59,098 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:39:59,099 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:39:59,099 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:39:59,100 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:39:59,101 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:40:14,548 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:40:14,549 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:40:14,550 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:40:14,551 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:40:14,551 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:41:22,489 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:41:22,490 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:41:22,491 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:41:22,492 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:41:22,493 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:41:26,855 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:41:26,856 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:41:26,857 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:41:26,860 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:41:26,860 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:42:17,038 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:42:17,040 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:42:17,040 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:42:17,042 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:42:17,042 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:42:53,695 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:42:53,696 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:42:53,696 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:42:53,697 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:42:53,697 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:44:05,253 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:44:05,254 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:44:05,255 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:44:05,256 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:44:05,256 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:44:33,693 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:44:33,694 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:44:33,695 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:44:33,696 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:44:33,697 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:45:20,750 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:45:20,751 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:45:20,752 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:45:20,753 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:45:20,754 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:50:05,974 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:50:05,975 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:50:05,976 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:50:05,977 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:50:05,977 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:50:28,153 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:50:28,156 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:50:28,156 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:50:28,157 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:50:28,158 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:50:57,860 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:50:57,861 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:50:57,862 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:50:57,863 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:50:57,863 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:51:16,350 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:51:16,352 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:51:16,352 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:51:16,353 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:51:16,354 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:52:45,739 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:52:45,740 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:52:45,740 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:52:45,741 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:52:45,741 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:53:40,793 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:53:40,794 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:53:40,795 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:53:40,798 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:53:40,798 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:53:54,905 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:53:54,906 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:53:54,907 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:53:54,908 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:53:54,908 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-16 10:54:12,954 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:54:12,955 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:54:12,955 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-16 10:54:12,959 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-16 10:54:12,960 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-17 11:26:47,415 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 11:26:47,433 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-17 11:26:47,441 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-17 11:26:47,444 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 11:26:47,444 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-17 11:26:48,138 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-17 11:26:48,147 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-17 11:26:48,148 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-17 11:26:48,149 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-17 11:26:48,243 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-17 11:26:48,245 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-17 11:26:48,247 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-17 11:26:48,247 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-17 11:26:48,377 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 11:26:48,378 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-17 11:26:48,378 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-17 11:26:48,380 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 11:26:48,380 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-17 11:26:48,481 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 11:26:48,483 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-17 11:26:48,484 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-17 11:26:48,484 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-18 11:34:23,347 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-18 11:34:23,356 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-18 11:34:23,362 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-18 11:34:23,364 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-18 11:34:23,364 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-18 11:34:24,082 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-18 11:34:24,088 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-18 11:34:24,090 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-18 11:34:24,090 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-18 11:34:24,191 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-18 11:34:24,192 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-18 11:34:24,193 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-18 11:34:24,193 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-18 11:34:24,302 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-18 11:34:24,303 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-18 11:34:24,304 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-18 11:34:24,305 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-18 11:34:24,305 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-18 11:34:24,394 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-18 11:34:24,395 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-18 11:34:24,396 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-18 11:34:24,397 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-19 09:57:06,528 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 09:57:06,538 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-19 09:57:06,546 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-19 09:57:06,558 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 09:57:06,558 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-19 09:57:08,525 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 09:57:08,541 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-19 09:57:08,543 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 09:57:08,543 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-19 09:57:08,722 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 09:57:08,726 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-19 09:57:08,732 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 09:57:08,740 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-19 09:57:09,021 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 09:57:09,021 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-19 09:57:09,022 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-19 09:57:09,023 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 09:57:09,023 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-19 09:57:09,171 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 09:57:09,174 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-19 09:57:09,177 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 09:57:09,177 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-19 21:58:01,094 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 21:58:01,106 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-19 21:58:01,136 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-19 21:58:01,146 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 21:58:01,146 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-19 21:58:03,801 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 21:58:03,810 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-19 21:58:03,813 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 21:58:03,814 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-19 21:58:03,978 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 21:58:03,978 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-19 21:58:03,980 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-19 21:58:03,981 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-19 21:58:04,392 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 21:58:04,393 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-19 21:58:04,394 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-19 21:58:04,400 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 21:58:04,400 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-19 21:58:04,590 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 21:58:04,591 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-19 21:58:04,592 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-19 21:58:04,593 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-20 22:58:29,353 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:29,361 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-20 22:58:29,368 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-20 22:58:29,371 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:29,371 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-20 22:58:30,323 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:30,333 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-20 22:58:30,334 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-20 22:58:30,335 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:30,335 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-20 22:58:30,750 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-20 22:58:30,752 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-20 22:58:30,754 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-20 22:58:30,754 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-20 22:58:30,939 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-20 22:58:30,939 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-20 22:58:30,941 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-20 22:58:30,942 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-20 22:58:31,135 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:31,135 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-20 22:58:31,136 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-20 22:58:31,137 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:31,138 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-20 22:58:31,337 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:31,337 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-20 22:58:31,339 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-20 22:58:31,339 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-21 09:21:06,031 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-21 09:21:06,054 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-21 09:21:06,078 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-21 09:21:06,080 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-21 09:21:06,080 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-21 09:21:06,978 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-21 09:21:06,987 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-21 09:21:06,988 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-21 09:21:06,989 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-21 09:21:07,146 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-21 09:21:07,147 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-21 09:21:07,148 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-21 09:21:07,149 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-21 09:21:07,298 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-21 09:21:07,299 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-21 09:21:07,300 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-21 09:21:07,302 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-21 09:21:07,302 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-21 09:21:07,435 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-21 09:21:07,438 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-21 09:21:07,439 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-21 09:21:07,439 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-22 09:33:05,700 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:33:05,713 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:33:05,719 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 09:33:05,728 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:33:05,728 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-22 09:33:09,167 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:33:09,174 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-22 09:33:09,179 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:33:09,179 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-22 09:33:09,558 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:33:09,558 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-22 09:33:09,561 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:33:09,562 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-22 09:33:09,934 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:33:09,935 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:33:09,936 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:33:09,941 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:33:09,941 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-22 09:33:10,049 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:33:10,050 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 09:33:10,054 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:33:10,054 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-22 09:55:16,182 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:16,193 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:55:16,199 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 09:55:16,201 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:16,201 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-22 09:55:16,845 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:55:16,852 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-22 09:55:16,853 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:55:16,853 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-22 09:55:17,121 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:17,130 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:55:17,131 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 09:55:17,132 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:17,133 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-22 09:55:17,298 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:55:17,361 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-22 09:55:17,363 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 09:55:17,364 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-22 09:55:18,097 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:18,098 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:55:18,098 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 09:55:18,100 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:18,101 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-22 09:55:18,311 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:18,312 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 09:55:18,314 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 09:55:18,314 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-22 10:03:11,148 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 10:03:11,157 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 10:03:11,162 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 10:03:11,164 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 10:03:11,165 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-22 10:03:11,887 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 10:03:11,897 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-22 10:03:11,899 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 10:03:11,899 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-22 10:03:12,022 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 10:03:12,023 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-22 10:03:12,024 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 10:03:12,025 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-22 10:03:12,145 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 10:03:12,146 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 10:03:12,146 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 10:03:12,148 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 10:03:12,148 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-22 10:03:12,269 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 10:03:12,269 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 10:03:12,271 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 10:03:12,271 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-22 18:05:26,013 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 18:05:26,025 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 18:05:26,031 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 18:05:26,033 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 18:05:26,033 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-22 18:05:27,215 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 18:05:27,222 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-22 18:05:27,223 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 18:05:27,224 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-22 18:05:27,374 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 18:05:27,375 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-22 18:05:27,377 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-22 18:05:27,377 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-22 18:05:27,538 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 18:05:27,539 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 18:05:27,540 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-22 18:05:27,541 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 18:05:27,542 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-22 18:05:27,722 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 18:05:27,722 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-22 18:05:27,724 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-22 18:05:27,725 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 08:59:46,012 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 08:59:46,020 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 08:59:46,026 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 08:59:46,029 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 08:59:46,029 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-24 08:59:46,832 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 08:59:46,840 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-24 08:59:46,842 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 08:59:46,843 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-24 08:59:46,997 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 08:59:46,998 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-24 08:59:46,999 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 08:59:47,001 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-24 08:59:47,122 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 08:59:47,123 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 08:59:47,123 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 08:59:47,125 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 08:59:47,125 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 08:59:47,232 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 08:59:47,232 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 08:59:47,234 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 08:59:47,234 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 09:01:39,335 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.qingke:MySpring2:0.0.1-SNAPSHOT @ /Users/niyongfeng/Documents/workspace/MySpring2/pom.xml.
+2017-05-24 09:01:41,222 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.pom
+2017-05-24 09:01:41,492 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.pom
+2017-05-24 09:01:41,730 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.pom
+2017-05-24 09:01:42,004 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.pom
+2017-05-24 09:01:42,246 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.pom
+2017-05-24 09:01:42,532 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.pom
+2017-05-24 09:01:42,769 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.pom
+2017-05-24 09:01:43,008 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.pom
+2017-05-24 09:01:43,257 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.pom
+2017-05-24 09:01:43,497 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.pom
+2017-05-24 09:01:43,735 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.pom
+2017-05-24 09:01:43,973 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.pom
+2017-05-24 09:01:44,212 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.pom
+2017-05-24 09:01:44,467 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.pom
+2017-05-24 09:01:44,703 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.pom
+2017-05-24 09:01:44,988 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.pom
+2017-05-24 09:01:45,292 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.7/log4j-1.2.7.pom
+2017-05-24 09:01:46,226 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.7/log4j-1.2.7.pom
+2017-05-24 09:01:46,522 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+2017-05-24 09:01:47,260 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+2017-05-24 09:01:47,511 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar
+2017-05-24 09:01:49,471 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar
+2017-05-24 09:01:49,708 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar
+2017-05-24 09:01:51,870 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar
+2017-05-24 09:01:52,108 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar
+2017-05-24 09:01:52,820 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar
+2017-05-24 09:01:53,086 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar
+2017-05-24 09:01:53,947 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar
+2017-05-24 09:01:54,179 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+2017-05-24 09:01:54,414 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+2017-05-24 09:01:54,649 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar
+2017-05-24 09:01:55,444 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar
+2017-05-24 09:01:55,732 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar
+2017-05-24 09:01:56,696 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar
+2017-05-24 09:01:56,933 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar
+2017-05-24 09:01:57,530 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar
+2017-05-24 09:01:57,772 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/log4j/log4j/1.2.7/log4j-1.2.7.jar
+2017-05-24 09:01:58,154 [Worker-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/log4j/log4j/1.2.7/log4j-1.2.7.jar
+2017-05-24 09:01:58,464 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:01:58,465 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:01:58,470 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:01:58,471 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 09:02:04,234 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:02:04,239 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:02:04,242 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:02:04,242 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 09:07:00,902 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for MySpring2
+2017-05-24 09:07:00,986 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for blogs
+2017-05-24 09:07:01,049 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for mavenlearn
+2017-05-24 09:07:01,060 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for nyfMaven
+2017-05-24 09:07:01,120 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for shop
+2017-05-24 09:07:01,172 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for springMybatis
+2017-05-24 09:07:01,862 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:01,863 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:07:01,866 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:01,866 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 09:07:01,867 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of MySpring2
+2017-05-24 09:07:01,867 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for MySpring2
+2017-05-24 09:07:01,874 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:02,068 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:02,069 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:07:02,069 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 09:07:02,072 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:02,072 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-24 09:07:02,072 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of blogs
+2017-05-24 09:07:02,072 [Worker-26] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for blogs
+2017-05-24 09:07:02,076 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:03,490 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:03,491 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-24 09:07:03,495 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:03,495 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-24 09:07:03,496 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of mavenlearn
+2017-05-24 09:07:03,496 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for mavenlearn
+2017-05-24 09:07:03,499 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:03,652 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:03,653 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-24 09:07:03,660 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:03,660 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-24 09:07:03,661 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of nyfMaven
+2017-05-24 09:07:03,661 [Worker-34] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for nyfMaven
+2017-05-24 09:07:03,664 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 09:07:03,991 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:03,991 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:07:03,992 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:07:03,996 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:03,996 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 09:07:03,997 [Worker-16] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of shop
+2017-05-24 09:07:03,997 [Worker-16] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for shop
+2017-05-24 09:07:04,000 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:04,049 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:04,049 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 09:07:04,052 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:07:04,052 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 09:07:04,052 [Worker-16] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of springMybatis
+2017-05-24 09:07:04,052 [Worker-16] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for springMybatis
+2017-05-24 09:07:04,055 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:11:06,065 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:11:06,066 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:11:06,067 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 09:11:06,069 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:11:06,069 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 09:11:06,294 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:11:06,295 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 09:11:06,296 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:11:06,296 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 09:50:39,293 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:50:39,294 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 09:50:39,299 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:50:39,299 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 09:58:12,487 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:58:12,487 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 09:58:12,488 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:58:12,488 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 09:58:36,712 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:58:36,713 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 09:58:36,714 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 09:58:36,714 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 10:12:01,255 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:01,272 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 10:12:01,279 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:01,280 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 10:12:02,045 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:02,046 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 10:12:02,047 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 10:12:02,048 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:02,048 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-24 10:12:02,352 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:02,355 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-24 10:12:02,357 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:02,357 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-24 10:12:02,488 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:02,489 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-24 10:12:02,490 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:02,491 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-24 10:12:02,959 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:02,959 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 10:12:02,960 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 10:12:02,961 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:02,962 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 10:12:03,076 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:03,077 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 10:12:03,079 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:03,079 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-24 10:12:04,456 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:04,459 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-24 10:12:04,460 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 10:12:04,461 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 10:12:04,535 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:04,539 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 10:12:04,540 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-24 10:12:04,542 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-24 10:12:04,542 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-24 20:23:09,525 [Worker-285] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:23:09,531 [Worker-285] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 20:23:09,532 [Worker-285] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:23:09,533 [Worker-285] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 20:23:10,706 [Worker-291] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:23:10,707 [Worker-291] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 20:23:10,709 [Worker-291] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:23:10,710 [Worker-291] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 20:24:02,429 [Worker-295] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:24:02,430 [Worker-295] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 20:24:02,432 [Worker-295] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:24:02,432 [Worker-295] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-24 20:25:13,167 [Worker-291] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:25:13,168 [Worker-291] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-24 20:25:13,169 [Worker-291] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-24 20:25:13,170 [Worker-291] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-25 09:38:00,988 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-25 09:38:01,006 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 09:38:01,014 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-25 09:38:01,015 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-25 09:38:01,720 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 09:38:01,721 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 09:38:01,721 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-25 09:38:01,723 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 09:38:01,724 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-25 09:38:02,026 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-25 09:38:02,027 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-25 09:38:02,028 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-25 09:38:02,029 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-25 09:38:02,160 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-25 09:38:02,161 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 09:38:02,164 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-25 09:38:02,164 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-25 09:38:02,666 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 09:38:02,667 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 09:38:02,668 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 09:38:02,669 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 09:38:02,670 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-25 09:38:02,817 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 09:38:02,818 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-25 09:38:02,820 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 09:38:02,820 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-26 14:05:54,474 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 14:05:54,487 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 14:05:54,494 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 14:05:54,495 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-26 14:05:55,140 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 14:05:55,141 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 14:05:55,142 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-26 14:05:55,143 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 14:05:55,143 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-26 14:05:55,462 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 14:05:55,463 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-26 14:05:55,464 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 14:05:55,464 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-26 14:05:55,567 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 14:05:55,568 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 14:05:55,569 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 14:05:55,570 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-26 14:05:56,394 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 14:05:56,397 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 14:05:56,397 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 14:05:56,399 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 14:05:56,399 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-26 14:05:56,531 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 14:05:56,533 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-26 14:05:56,535 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 14:05:56,535 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-26 15:22:16,460 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 15:22:16,475 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 15:22:16,484 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 15:22:16,484 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-26 15:22:17,160 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 15:22:17,161 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 15:22:17,162 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-26 15:22:17,163 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 15:22:17,163 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-26 15:22:17,402 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 15:22:17,403 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-26 15:22:17,406 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 15:22:17,406 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-26 15:22:17,531 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 15:22:17,531 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 15:22:17,533 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-26 15:22:17,533 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-26 15:22:17,878 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 15:22:17,879 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 15:22:17,879 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-26 15:22:17,881 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 15:22:17,881 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-26 15:22:18,206 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 15:22:18,207 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-26 15:22:18,208 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 15:22:18,208 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-27 10:34:33,834 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-27 10:34:33,849 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-27 10:34:33,858 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-27 10:34:33,859 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-27 10:34:34,465 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 10:34:34,465 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-27 10:34:34,466 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-27 10:34:34,467 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 10:34:34,467 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-27 10:34:34,910 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-27 10:34:34,911 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-27 10:34:34,912 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-27 10:34:34,913 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-27 10:34:35,033 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-27 10:34:35,034 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 10:34:35,036 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-27 10:34:35,036 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-27 10:34:35,503 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 10:34:35,504 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-27 10:34:35,505 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-27 10:34:35,507 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 10:34:35,507 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-27 10:34:35,605 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 10:34:35,606 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-27 10:34:35,608 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 10:34:35,608 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-28 15:22:13,201 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-28 15:22:13,225 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-28 15:22:13,236 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-28 15:22:13,237 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-28 15:22:14,249 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 15:22:14,250 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-28 15:22:14,251 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-28 15:22:14,253 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 15:22:14,253 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-28 15:22:14,583 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-28 15:22:14,584 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-28 15:22:14,586 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-28 15:22:14,586 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-28 15:22:14,695 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-28 15:22:14,696 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 15:22:14,698 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-28 15:22:14,698 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-28 15:22:14,998 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 15:22:14,999 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-28 15:22:15,001 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 15:22:15,001 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-05-31 09:33:05,700 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-31 09:33:05,717 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-31 09:33:05,726 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-31 09:33:05,726 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-05-31 09:33:06,383 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-31 09:33:06,384 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-31 09:33:06,385 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-31 09:33:06,386 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-31 09:33:06,386 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-05-31 09:33:06,510 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-31 09:33:06,511 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-05-31 09:33:06,513 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-31 09:33:06,515 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-05-31 09:33:06,601 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-31 09:33:06,601 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-31 09:33:06,603 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-31 09:33:06,603 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-05-31 09:33:07,009 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-31 09:33:07,012 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-31 09:33:07,013 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-31 09:33:07,016 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-31 09:33:07,017 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-31 09:33:07,833 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-31 09:33:07,835 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-05-31 09:33:07,837 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-31 09:33:07,837 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-06-01 09:58:47,611 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-01 09:58:47,672 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-01 09:58:47,690 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-01 09:58:47,691 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-06-01 09:58:48,724 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-01 09:58:48,725 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-01 09:58:48,725 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-06-01 09:58:48,727 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-01 09:58:48,727 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-06-01 09:58:49,050 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-01 09:58:49,051 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-06-01 09:58:49,053 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-01 09:58:49,053 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-06-01 09:58:49,428 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-01 09:58:49,434 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-06-01 09:58:49,435 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-01 09:58:49,436 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-06-01 09:58:49,897 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-01 09:58:49,899 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-01 09:58:49,900 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-01 09:58:49,903 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-01 09:58:49,903 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-06-01 09:58:50,099 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-01 09:58:50,099 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-06-01 09:58:50,101 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-01 09:58:50,101 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources
+2017-06-02 10:05:49,667 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-02 10:05:49,689 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-02 10:05:49,700 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-02 10:05:49,701 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/MySpring2/src/test/resources
+2017-06-02 10:05:51,325 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-02 10:05:51,326 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-02 10:05:51,326 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-06-02 10:05:51,328 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-02 10:05:51,328 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/blogs/src/test/resources
+2017-06-02 10:05:51,794 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-02 10:05:51,795 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2017-06-02 10:05:51,797 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-02 10:05:51,797 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/mavenlearn/src/test/resources
+2017-06-02 10:05:52,026 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-02 10:05:52,027 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-06-02 10:05:52,029 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-06-02 10:05:52,029 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Documents/workspace/nyfMaven/src/test/resources
+2017-06-02 10:05:52,591 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-02 10:05:52,592 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-02 10:05:52,592 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-06-02 10:05:52,593 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-02 10:05:52,594 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-06-02 10:05:52,842 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-02 10:05:52,842 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-06-02 10:05:52,844 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-06-02 10:05:52,844 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/niyongfeng/Downloads/springMybatis/src/test/resources

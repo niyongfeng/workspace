@@ -1,0 +1,46 @@
+package com.nyf.api.test;
+
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+import com.xiaohoo.api.domain.GroupMomentScroe;
+import com.xiaohoo.api.service.impl.GroupMembersServiceImp;
+import com.xiaohoo.api.service.impl.StatusMarkServiceImp;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration
+@ContextConfiguration(locations={"classpath:config/spring/biz/datasource.xml"})
+public class Test {
+
+	@Resource
+	private GroupMembersServiceImp groupMembersServiceImp;
+
+	@NYFTest
+	public void test() {
+		System.out.println("groupMembersServiceImp:" + groupMembersServiceImp);
+		Integer a = new Integer(1);
+		Integer b = new Integer(3);
+		System.out.println(groupMembersServiceImp.getGroupMembers(a, b).toString());
+	}
+	
+//	@Resource
+//	private StatusMarkServiceImp statusMarkServiceImp;
+//	
+//	@Test
+//	public void testStatusMark() {
+//		System.out.println("statusMarkServiceImp" + statusMarkServiceImp);
+//		GroupMomentScroe groupMomentScroe = new GroupMomentScroe();
+//		groupMomentScroe.setScore(9);
+//		groupMomentScroe.setUserId(1);
+//		groupMomentScroe.setGroupMomentsId(1);
+//		boolean b = statusMarkServiceImp.statusMark(groupMomentScroe);
+//		System.out.println(b);
+//	}
+
+}

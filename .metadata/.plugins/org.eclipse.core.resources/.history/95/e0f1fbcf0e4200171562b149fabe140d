@@ -1,0 +1,30 @@
+package com.xiaohoo.api.service.impl;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nyf.api.NewGroupMembers;
+import com.xiaohoo.api.dao.GroupMembersMapper;
+import com.xiaohoo.api.service.GroupMembersService;
+
+import net.sf.json.JSONArray;
+
+//显示群内成员的功能实现类
+@Service("groupMembersService")
+public class GroupMembersServiceImp implements GroupMembersService{
+
+	@Autowired
+	GroupMembersMapper groupMembersMapper;
+	
+	@Override
+	public JSONArray getGroupMembers(Integer groupId, Integer userId) {
+		System.out.println(groupMembersMapper);
+		List<NewGroupMembers> groupMembers = groupMembersMapper.selectByGroupId(userId,groupId);
+		JSONArray json = JSONArray.fromObject(groupMembers); 
+		return json;
+	}
+
+}

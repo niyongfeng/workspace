@@ -27,7 +27,9 @@ public class Competition {
 		return address;
 	}
 	public void setAddress(String address) {
+		if(!("".equals(address))) {
 		this.address = address;
+		}
 	}
 	public Integer getId() {
 		return id;
@@ -45,7 +47,9 @@ public class Competition {
 		return description;
 	}
 	public void setDescription(String description) {
+		if(!("".equals(description))) {
 		this.description = description;
+		}
 	}
 	public Date getApply_time() {
 		return apply_time;

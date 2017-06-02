@@ -1,0 +1,14 @@
+package com.xiaohoo.api.service.impl;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class AdministratorServiceImplTest {
+
+	@Test
+	public void testList() {
+		fail("Not yet implemented");
+	}
+
+}

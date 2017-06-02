@@ -1,0 +1,25 @@
+package com.xiaohoo.api.service;
+
+
+import java.util.List;
+
+import com.xiaohoo.api.domain.GroupMomentResponse;
+
+import net.sf.json.JSONArray;
+
+public interface GroupMembersService {
+	/**
+	 * 显示群内成员列表
+	 * @param groupId
+	 * @param userId
+	 * @return
+	 */
+	public JSONArray getGroupMembers(Integer groupId, Integer userId);
+	
+	/**
+	 * 查看该条状态的所有回复信息
+	 * @param groupMomentsId
+	 * @return
+	 */
+	public List<GroupMomentResponse> getGroupMomentResponse(Integer groupMomentsId);
+}

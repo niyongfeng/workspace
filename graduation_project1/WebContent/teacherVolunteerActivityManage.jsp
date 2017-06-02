@@ -133,13 +133,15 @@
 						<div class="tab-pane fade" id="profile">
 							<form id="tab" action="VolunteerActivityManageServlet"
 								method="get">
-								<label>活动时间</label> <input name="activity_time" type="text"
+								<label>活动时间</label> <input name="activity_time1" type="text"
 									class="input-xlarge" placeholder="yyyy-MM-dd HH:mm:ss">
 								<label>具体内容</label>
-								<textarea name="description" rows="3" class="input-xlarge"></textarea>
-								<label>人数</label> <input name="number" type="text"
+								<textarea name="description1" rows="3" class="input-xlarge"></textarea>
+								<label>人数</label> <input name="number1" type="text"
 									class="input-xlarge"> <label>地点</label> <input
-									name="address" type="text" class="input-xlarge">
+									name="address1" type="text" class="input-xlarge">
+									<label>学分</label> <input name="credit1" type="number" step="0.1"
+									class="input-xlarge">
 								<div>
 									<button class="btn btn-primary" type="submit">发布</button>
 								</div>
@@ -159,7 +161,9 @@
 								<textarea name="description" rows="3" class="input-xlarge"></textarea>
 								<label>人数</label> <input name="number" type="text"
 									class="input-xlarge"> <label>地点</label> <input
-									name="address" type="text" class="input-xlarge"> <label>状态</label>
+									name="address" type="text" class="input-xlarge">
+									<label>学分</label> <input name="credit" type="number" step="0.1"
+									class="input-xlarge"> <label>状态</label>
 								<select id="code" name="status">
 									<option value="2">请选择</option>
 									<option value="0">失效</option>

@@ -44,15 +44,15 @@ public class TeacherProjectManageServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("utf-8");
-		String name = request.getParameter("name");
-		String description = request.getParameter("description");
-		String teacher = request.getParameter("teacher");
+		String name = request.getParameter("name1");
+		String description = request.getParameter("description1");
+		String teacher = request.getParameter("teacher1");
 		String userName = request.getSession().getAttribute("userName").toString();
 		LoginDao loginDao = MybatisSessionFactory.getSession().getMapper(LoginDao.class);
 		List<Login> list = loginDao.selectByName(userName);
 		PrintWriter out = response.getWriter();
 		try{
-		int number = Integer.valueOf(request.getParameter("number"));
+		int number = Integer.valueOf(request.getParameter("number1"));
 		TeacherProject c = new TeacherProject();
 		c.setName(name);
 		c.setTeacher(teacher);
@@ -62,7 +62,16 @@ public class TeacherProjectManageServlet extends HttpServlet {
 		System.out.println(c);
 		SqlSession s = MybatisSessionFactory.getSession(); 
 		TeacherProjectDao cd = s.getMapper(TeacherProjectDao.class);
-		cd.insert(c);
+		try{
+			cd.insert(c);
+		}catch(Exception e) {
+			if (list.get(0).getCode() == 2) {
+				out.print(
+						"<script>alert('发布失败！(不能为空)');window.location.href='teacherTeacherProject.jsp';</script>");
+			} else {
+				out.print("<script>alert('发布失败！(不能为空)');window.location.href='manTeacherProject.jsp';</script>");
+			}
+		}
 		s.commit();
 		if (list.get(0).getCode() == 2) {
 			out.print(
@@ -78,6 +87,7 @@ public class TeacherProjectManageServlet extends HttpServlet {
 				out.print("<script>alert('发布失败！(人数格式不正确)');window.location.href='manTeacherProject.jsp';</script>");
 			}
 		}
+		
 	}
 
 	/**

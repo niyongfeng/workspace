@@ -1,0 +1,21 @@
+package com.xiaohoo.api.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.xiaohoo.api.dao.TipOffMapper;
+import com.xiaohoo.api.domain.TipOff;
+
+//举报功能实现类
+@Service
+public class TipOffServiceImp {
+
+	@Autowired
+	TipOffMapper tipOffMapper;
+	
+	public boolean tipOff(TipOff tipOff) {
+		int b = tipOffMapper.insertSelective(tipOff);
+		return (b != 0);
+	}
+	
+}

@@ -46,6 +46,7 @@ public class StudentPwd extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		Login l = new Login();
 		List<Login> list = ld.selectByNameA(name);
+		int code = list.get(0).getCode();
 		if(firstPwd.equals(secondPwd)) {
 			l.setId(list.get(0).getId());
 			l.setName(name);
@@ -54,11 +55,24 @@ public class StudentPwd extends HttpServlet {
 			if(ld.update(l)) {
 				session.commit();
 				out.print("<script>alert('密码修改成功！');window.location.href='sign-in.html';</script>");
-			}else {
-				out.print("<script>alert('密码修改失败！');window.location.href='studentIndex.jsp';</script>");
+			}else {		
+				if(code == 1) {
+					out.print("<script>alert('密码修改失败！');window.location.href='studentIndex.jsp';</script>");
+				}else if(code == 2) {
+					out.print("<script>alert('密码修改失败！');window.location.href='teacherIndex.jsp';</script>");
+				}else {
+					out.print("<script>alert('密码修改失败！');window.location.href='manIndex.jsp';</script>");
+				}
+				
 			}
 		}else{
-			out.print("<script>alert('两次密码不一致！');window.location.href='studentIndex.jsp';</script>");
+			if(code == 1) {
+				out.print("<script>alert('两次密码不一致！');window.location.href='pwd.jsp';</script>");
+			}else if(code == 2) {
+				out.print("<script>alert('两次密码不一致！');window.location.href='pwd2.jsp';</script>");
+			}else {
+				out.print("<script>alert('两次密码不一致！');window.location.href='pwd3.jsp';</script>");
+			}
 		}
 	}
 

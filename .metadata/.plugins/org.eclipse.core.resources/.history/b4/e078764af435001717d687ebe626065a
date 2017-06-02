@@ -1,9 +1,0 @@
-package com.nyf.dao;
-
-import java.util.List;
-
-import com.nyf.pojo.Product;
-
-public interface TagDao {
-	List<Product> selectProductByTagId(int tag_id);
-}
